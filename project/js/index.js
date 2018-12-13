@@ -1,14 +1,30 @@
 $(document).ready(function () {
+	
+	//<简介的展开与收起 
+	
 	var len=180;
 	var content=$('.brief-intro span').text();
 	var a=$('<a href="javascript:;"></a>');
 	var span=$('<span></span>');
-	a.text(content.length>len?'...展开':'').css({'color':'#6aa826'});
+	a.text(' ...展开').css({'color':'#6aa826'});
 	span.html(content.substring(0,len));
-	a.on('click',function () {
+	if (content.length>len) {
+		$('.a').hide();
+		$('.brief-intro').append(span).append(a);
+		a.append('<i>></i>');
+		$('.brief-intro i').css({
+			display:'inline-block',
+			transform:'rotate(90deg) scale(1,1.5)',
+			position:'relative',
+			left:2,
+			top:2,
+			fontStyle:'normal'
+		});
+		a.on('click',function () {
 		if(a.html().indexOf("展开")>0){ 
 			a.html("收起<i>></i>");
-			span.html(content);
+			$(".a").show();
+			span.hide();
 			$('.brief-intro i').css({
 				display:'inline-block',
 				transform:'rotate(270deg) scale(1,1.5)',
@@ -18,8 +34,9 @@ $(document).ready(function () {
 				fontStyle:'normal'
 			});
 		}else{
-			a.html("... 展开<i>></i>");
-			span.html(content.substring(0,len));
+			a.html(" ... 展开<i>></i>");
+			span.show();
+			$('.a').hide();
 			$('.brief-intro i').css({
 				display:'inline-block',
 				transform:'rotate(90deg) scale(1,1.5)',
@@ -30,17 +47,12 @@ $(document).ready(function () {
 			});
 		}
 	});
-	$('.a').remove();
-	$('.brief-intro').append(span).append(a);
-	a.append('<i>></i>');
-	$('.brief-intro i').css({
-		display:'inline-block',
-		transform:'rotate(90deg) scale(1,1.5)',
-		position:'relative',
-		left:2,
-		top:2,
-		fontStyle:'normal'
-	});
+	}
+	
+	//简介的展开与收起 >
+	
+	//<轮播图的相关功能 
+	
 	var img=$(".caro-img");
 	var index=0;
 	var timer=null;
@@ -161,6 +173,12 @@ $(document).ready(function () {
 			$(".cont-bottom").show();
 		}
 	});
+
+	//轮播图的相关功能 >
+	
+
+	//<剧集列表与分集剧情按钮的点击、切换及其下的各类操作
+	
 	$(".list-num").find('li').each(function () {
 		$(this).children('a').on('click',function () {
 			var numIndex=$(this).parent().index();
@@ -174,6 +192,9 @@ $(document).ready(function () {
 		$(".cont-num").show();
 		$(".cont-pic").show();
 		$(this).parent().addClass('selected').next().removeClass('selected');
+
+	//<数字选集空白部分的图片瀑布流实现 
+	
 		var c=$(".cont-pic").children();
 		var col=parseInt($('.cont-pic').width()/c.eq(0).outerWidth());
 		var heightArr=[],minH=0,minI=0;
@@ -193,6 +214,9 @@ $(document).ready(function () {
 				}
 			});
 		},100);
+
+	//数字选集空白部分的图片瀑布流实现 >
+	
 	});
 	$(".list-r").find('li:last a').on('click',function () {
 		$(".cont-bottom").show();
@@ -200,6 +224,9 @@ $(document).ready(function () {
 		$(".cont-pic").hide();
 		$(this).parent().addClass('selected').prev().removeClass('selected');
 	});
+
+	//<模拟播放器播放武林外传的进度条 
+	
 	var numM=parseInt(45+Math.random()*3);
 	var numS=parseInt(Math.random()*60);
 	numS=numS<10?'0'+numS:numS;
@@ -233,6 +260,11 @@ $(document).ready(function () {
 			'width':sum
 		});
 	},1000);
+
+	//模拟播放器播放武林外传的进度条 >
+	
+	//<吸顶效果 
+	
 	var scrollH=$(".cont-top").offset().top;
 	$(document).scroll(function () {
 		if ($(document).scrollTop()>scrollH) {
@@ -261,6 +293,11 @@ $(document).ready(function () {
 			$(".cont-upto").hide();
 		}
 	});
+	
+	//吸顶效果 >
+	
+	//<返回顶部按钮的动画效果
+	
 	$(".cont-upto").mouseenter(function () {
 		$(this).html('返回顶部').animate({
 			width:87,
@@ -274,6 +311,11 @@ $(document).ready(function () {
 	}).on('click',function () {
 		$('html,body').animate({scrollTop:0},200);
 	});
+
+	//返回顶部按钮的动画效果>
+		
+	//获取输入的val值在arr数组中的index
+	
 	function getIndex(arr, val) {
 		for (var i = 0; i < arr.length; i++) {
 			if (arr[i] === val) {
