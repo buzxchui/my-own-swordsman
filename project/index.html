@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<link rel="stylesheet" href="index.css">
+	<script src="js/jquery-2.2.1.min.js"></script>
+	<script src="js/underscore.js"></script>
+</head>
+<body>
+	<div class="box">
+		<header></header>
+		<div class="introduce">
+			<div class="int-in">
+				<div class="img">
+					<img src="img/a.jpg" alt="武林外传">
+				</div>
+				<div class="info">
+					<h1>武林外传</h1>
+					<div class="info-in">
+						<div class="area-lang">
+							<div class="area"><em>地区：</em>内地</div>
+							<div class="language"><em>语言：</em>普通话</div>
+						</div>
+						<div class="type-dire">
+							<div class="type"><em>类型：</em>剧情/喜剧/古装</div>
+							<div class="director"><em>导演：</em>尚敬</div>
+						</div>
+						<div class="brief-intro"><em>简介：</em><span class="a">国内情景喜剧的巅峰之作，一举捧红沙溢，闫妮，姚晨等明星，人物形象各个生动，每集笑点让人捧腹大笑不止。故事讲述了以掌柜的佟湘玉(抠门之极的女店主，风情万种但心地善良，婆婆妈妈又十分鸡贼。)为首的一个客栈班底，这其中有跑堂的白展堂(会点穴、有武功，是个盗贼，想改过自新，其实胆小如鼠)，有打杂的郭芙蓉(她自恃有武功，乱闯江湖，喜欢动手动脚，虽为大侠千金，其实武功不咋的，是个标准的野蛮女友)，有厨子李大嘴(成天幻想学武功当大侠，就是不好好做饭，做出的饭难吃死了)，会算账的吕秀才(常常是子曰不离口，其实是个百无一用的书生，手无缚鸡之力却歪打正着地混来一个“关中大侠”的称号)，有寄宿客栈的祝无双(虽为葵花派武林高手，其实是个常受欺负的弱女子，美丽却没有爱情光顾)，有顽皮少女莫小贝(江湖上传闻是个女魔头，实际上是个爱逃学并且只想吃糖葫芦的小丫头片子)，还有两位捕快，一个老邢，一个小六，每天吵吵着破大案子，其实是俩混日子的糊涂蛋。这样一群性情各异、即可怜又可爱的年轻人聚在一起，在同福客栈里经历了江湖上的各种风险和传奇，遍尝人间冷暖，体会亲情爱情，见证成长过程中的酸甜苦辣。</span></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="carousel">
+			<div class="caro-in">
+				<span class="caro-l"></span>
+				<span class="caro-r"></span>
+				<div class="caro-img" style="z-index: 12"><img src="img/1.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 11"><img src="img/2.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 9"><img src="img/4.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 8"><img src="img/5.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 7"><img src="img/a6.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 6"><img src="img/a7.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 5"><img src="img/a8.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 4"><img src="img/a9.jpg" alt="武林外传" width="500"></div>
+				<div class="caro-img" style="z-index: 3"><img src="img/a10.jpg" alt="武林外传" width="500"></div>
+				<div class="dot"></div>
+			</div>
+			<div class="caro-play">
+					<div class="bar">
+						<img src="img/3.jpg" alt="" width="250">
+						<li><span></span><em><i>00</i>:<i>00</i></em><em>/</em><em></em></li>
+					</div>
+				</div>
+		</div>
+		<div class="content">
+			<div class="cont-top">
+				<ul>
+					<li class="selected"><a href="javascript:;">剧集列表</a></li>
+					<li><a href="javascript:;">分集剧情</a></li>
+				</ul>
+			</div>
+			<div class="content-in">
+				<div class="cont-l">
+					<div class="list">
+						<div class="list-l"> 剧集列表 ( 更新至<span>80</span>集/共80集 ) </div>
+						<div class="list-r">
+							<ul>
+								<li><a href="javascript:;">数字选集</a></li>
+								<li class="selected"><a href="javascript:;">图文选集</a></li>
+							</ul>
+						</div>
+						<div class="list-num">
+							<ul>
+								<li class="selected"><a href="javascript:;">1-20</a></li>
+								<li><a href="javascript:;">21-40</a></li>
+								<li><a href="javascript:;">41-60</a></li>
+								<li><a href="javascript:;">61-80</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cont-r">
+					<div class="list">
+						<div class="list-in">主要人物</div>
+					</div>
+					<div class="person">
+						<ul>
+							<li><img src="img/laobai.jpg" alt="老白" width="137" height="195"><p>白展堂，又叫老白，传说中的盗圣，人送外号“珍珠翡翠白玉汤”。如今的同福三怂之首，平日好吃懒做，没脸没皮，关键时刻值得信赖。招式：葵花点穴手。</p></li>
+							<li><img src="img/zhanguide.jpg" alt="掌柜的" width="137" height="195"><p>佟湘玉，龙门客栈千金。伙计们口中公认的“钱串子”，但深得大家喜爱的掌柜的。</p></li>
+							<li><img src="img/dazui.jpg" alt="大嘴" width="137" height="195"><p>李秀莲，又名李大嘴。京城食神的唯一传人。前七侠镇捕头，后来来同福客栈当厨子。同福三怂之一。能吃，很能吃，请假小达人。可获称号“百年孤独”。</p></li>
+							<li><img src="img/xiaoguo.jpg" alt="小郭" width="137" height="195"><p>郭巨侠之女。同福三怂之一。以“雌雄双煞”闯荡江湖，在同福客栈中打坏家具，要打工20年，留在了同福客栈。体会了不一样的江湖，找到了自己最爱的“骨头”。招式：排山倒海。</p></li>
+							<li><img src="img/xiucai.jpg" alt="秀才" width="137" height="195"><p>三岁识千字，五岁背唐诗，七岁熟读诗词歌赋，八岁精通四书五经，但还是穷秀才，酸秀才。为考取功名，把客栈卖给佟湘玉还债。口头语：子曾经曰过。</p></li>
+							<li><img src="img/xiaobei.jpg" alt="小贝" width="137" height="195"><p>佟湘玉的小姑子，典型熊孩子。衡山派掌门，五岳盟主。</p></li>
+							<li><img src="img/laoxing.jpg" alt="老邢" width="137" height="195"><p>七侠镇捕头，每次来客栈都会顺手拿点东西，所以观众题词“刑不走空”。缺点一堆，初步估计三百条打底，但在其下的七侠镇却是民风淳朴，和谐太平。</p></li>
+							<li><img src="img/xiaoliu.jpg" alt="小六" width="137" height="195"><p>七侠镇捕快，后成为捕头。脑子傻傻的。口头语：帮我照顾我七舅姥爷。</p></li>
+							<li><img src="img/wushuang.jpg" alt="无双" width="137" height="195"><p>老白师妹，为人贤惠善良。独自浪迹江湖，最后在同福客栈落脚。口头语：放着我来。</p></li>
+						</ul>
+					</div>
+				</div>
+				<div class="cont-bottom">
+					<ul>
+						<li><img src="img/a1.jpg" alt="" width="116" height="65"><p>1 郭女侠怒砸同福店 &nbsp;&nbsp;&nbsp;佟掌柜妙点迷路人 </p></li>
+						<li><img src="img/a2.jpg" alt="" width="116" height="65"><p>2 掌柜的慰问装病者 &nbsp;&nbsp;&nbsp;跑堂人收拾寻衅女 </p></li>
+						<li><img src="img/a3.jpg" alt="" width="116" height="65"><p>3 众伙计沦为小跟班 &nbsp;&nbsp;&nbsp;莫小贝建起八大派 </p></li>
+						<li><img src="img/a4.jpg" alt="" width="116" height="65"><p>4 李厨子智斗瞎老娘 &nbsp;&nbsp;&nbsp;白盗圣惨遇赌大王 </p></li>
+						<li><img src="img/a5.jpg" alt="" width="116" height="65"><p>5 展红绫千里追扒手 &nbsp;&nbsp;&nbsp;郭芙蓉一心迷盗圣 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/6.jpg" alt="" width="116" height="65"><p>6 杨蕙兰比武招郎君 &nbsp;&nbsp;&nbsp;李大嘴施招毙煞神 </p></li>
+						<li><img src="img/7.jpg" alt="" width="116" height="65"><p>7 讨银钱秀才苦费心 &nbsp;&nbsp;&nbsp;泄私愤芙蓉恶作剧 </p></li>
+						<li><img src="img/8.jpg" alt="" width="116" height="65"><p>8 七侠古镇寡妇寻夫 &nbsp;&nbsp;&nbsp;尚儒客栈众人聚首 </p></li>
+						<li><img src="img/9.jpg" alt="" width="116" height="65"><p>9 佟湘玉煞费良苦心 &nbsp;&nbsp;&nbsp;莫小贝梦游影视城 </p></li>
+						<li><img src="img/10.jpg" alt="" width="116" height="65"><p>10 壮怂胆捕头喝烈酒 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;施恩惠秀才偷剩菜 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/11.jpg" alt="" width="116" height="65"><p>11 扈十娘撒娇勾展堂 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赛貂蝉耍赖讹湘玉 </p></li>
+						<li><img src="img/12.jpg" alt="" width="116" height="65"><p>12 受委屈伙计装叛变 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;求生意老板充大方 </p></li>
+						<li><img src="img/13.jpg" alt="" width="116" height="65"><p>13 争自尊大嘴扮文豪 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;解危难湘玉设大赛 </p></li>
+						<li><img src="img/14.jpg" alt="" width="116" height="65"><p>14 邢捕头勇破杀鸡案 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;燕小六力推防贼法 </p></li>
+						<li><img src="img/15.jpg" alt="" width="116" height="65"><p>15 雷老五潜入县衙门 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟掌柜钻进牛角尖 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/16.jpg" alt="" width="116" height="65"><p>16 为骗财书商耍手段 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;欲销赃掌柜吓破胆 </p></li>
+						<li><img src="img/17.jpg" alt="" width="116" height="65"><p>17 莫小贝初学衡山派 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钱夫人再闹同福店 </p></li>
+						<li><img src="img/18.jpg" alt="" width="116" height="65"><p>18 燕小六酒醉乱抓人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郭芙蓉心痴错定情 </p></li>
+						<li><img src="img/19.jpg" alt="" width="116" height="65"><p>19 李大嘴苦练降龙掌 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郭芙蓉难逃生死劫 </p></li>
+						<li><img src="img/20.jpg" alt="" width="116" height="65"><p>20 泼皮侯三搅和客栈 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;女侠芙蓉操办过年 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/21.jpg" alt="" width="116" height="65"><p>21 寻短见老吴见魔女 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;赌怨气小郭教武功 </p></li>
+						<li><img src="img/22.jpg" alt="" width="116" height="65"><p>22 佟掌柜喜获榴莲果 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;江小道痛打无辜郎 </p></li>
+						<li><img src="img/23.jpg" alt="" width="116" height="65"><p>23 卖私盐厨子遭盘查 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;换身份贼头变捕快 </p></li>
+						<li><img src="img/24.jpg" alt="" width="116" height="65"><p>24 算命人作法被识破 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郭芙蓉洗面遭毁容 </p></li>
+						<li><img src="img/25.jpg" alt="" width="116" height="65"><p>25 佟老爹怒嫁不孝女 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;白展堂误娶无情人 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/26.jpg" alt="" width="116" height="65"><p>26 求休书小郭盼断肠 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;思佳人秀才伤透心 </p></li>
+						<li><img src="img/27.jpg" alt="" width="116" height="65"><p>27 入丐帮老邢丢公职 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;升捕头小六打官腔 </p></li>
+						<li><img src="img/28.jpg" alt="" width="116" height="65"><p>28 钱夫人贪财生毒计 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莫小贝雪耻怒报官 </p></li>
+						<li><img src="img/29.jpg" alt="" width="116" height="65"><p>29 吕圣人智斗姬无命 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟掌柜火拼展红绫 </p></li>
+						<li><img src="img/30.jpg" alt="" width="116" height="65"><p>30 佟石头离乡闯江湖 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郭芙蓉回家探父母 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/31.jpg" alt="" width="116" height="65"><p>31 痴秀才思念郭芙蓉 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;醋掌柜刁难祝无双 </p></li>
+						<li><img src="img/32.jpg" alt="" width="116" height="65"><p>32 拼厨艺大嘴成碎催 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;遇良才诸葛传衣钵 </p></li>
+						<li><img src="img/33.jpg" alt="" width="116" height="65"><p>33 西域客欲擒关中侠 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;涉奇险盗圣救人质 </p></li>
+						<li><img src="img/34.jpg" alt="" width="116" height="65"><p>34 莫小贝受邀赴衡山 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;为情困秀才抱错人 </p></li>
+						<li><img src="img/35.jpg" alt="" width="116" height="65"><p>35 小魔女执意做红娘 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟湘玉一心修剑谱 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/36.jpg" alt="" width="116" height="65"><p>36 遇追风盗圣吓破胆 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;见芙蓉秀才惊断魂 </p></li>
+						<li><img src="img/37.jpg" alt="" width="116" height="65"><p>37 心不甘小郭拼才艺 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;情不愿无双走天涯 </p></li>
+						<li><img src="img/38.jpg" alt="" width="116" height="65"><p>38 迎挑战小贝当掌柜 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;出狠招湘玉赢赌局 </p></li>
+						<li><img src="img/39.jpg" alt="" width="116" height="65"><p>39 吕秀才得理不饶人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郭芙蓉自食苦月饼 </p></li>
+						<li><img src="img/40.jpg" alt="" width="116" height="65"><p>40 庆中秋好梦一日游 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;历磨难客栈重聚首 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/41.jpg" alt="" width="116" height="65"><p>41 痴情汉重逢梦中人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;糊涂女初识菜刀门 </p></li>
+						<li><img src="img/42.jpg" alt="" width="116" height="65"><p>42 燕小六大摆迷魂阵 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;千面人关底显真身 </p></li>
+						<li><img src="img/43.jpg" alt="" width="116" height="65"><p>43 恶婆婆率众闹洞房 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;善媳妇受虐一身伤 </p></li>
+						<li><img src="img/44.jpg" alt="" width="116" height="65"><p>44 吕秀才误收嗜血徒 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;白展堂临终吐心声 </p></li>
+						<li><img src="img/45.jpg" alt="" width="116" height="65"><p>45 通缉犯转眼成病患 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;阶下囚洗心重作人 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/46.jpg" alt="" width="116" height="65"><p>46 神秘客夜访七侠镇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;莫掌门血战灯市街 </p></li>
+						<li><img src="img/47.jpg" alt="" width="116" height="65"><p>47 小姐妹重逢暗叫劲 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老夫妻患难见真情 </p></li>
+						<li><img src="img/48.jpg" alt="" width="116" height="65"><p>48 败家女随口开条件 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;穷哥俩合伙办武馆 </p></li>
+						<li><img src="img/49.jpg" alt="" width="116" height="65"><p>49 慕容子专访莫掌门 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;吕秀才定义真侠士 </p></li>
+						<li><img src="img/50.jpg" alt="" width="116" height="65"><p>50 邢捕头变身小杂役 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;燕小六临别显真情 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/51.jpg" alt="" width="116" height="65"><p>51 采花盗意外现真身 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;虎外甥作媒为报恩 </p></li>
+						<li><img src="img/52.jpg" alt="" width="116" height="65"><p>52 佟石头初尝爱滋味 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;祝无双投身六扇门 </p></li>
+						<li><img src="img/53.jpg" alt="" width="116" height="65"><p>53 燕捕头研发绝密令 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包侍郎得理不饶人 </p></li>
+						<li><img src="img/54.jpg" alt="" width="116" height="65"><p>54 苦刑犯逃离同福店 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;黑衣人连夜救钦犯 </p></li>
+						<li><img src="img/55.jpg" alt="" width="116" height="65"><p>55 佟掌柜沦为十六姨 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包大仁欢度洞房夜 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/56.jpg" alt="" width="116" height="65"><p>56 展侍卫私放真刺客 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;祝无双泪别假卧底 </p></li>
+						<li><img src="img/57.jpg" alt="" width="116" height="65"><p>57 李大嘴装疯孵鸡蛋 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟掌柜设宴套难题 </p></li>
+						<li><img src="img/58.jpg" alt="" width="116" height="65"><p>58 小师妹现身七侠镇 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;大师姐难解心头愤 </p></li>
+						<li><img src="img/59.jpg" alt="" width="116" height="65"><p>59 佟掌柜魂归小西天 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;睡美人变身火凤凰 </p></li>
+						<li><img src="img/60.jpg" alt="" width="116" height="65"><p>60 李大嘴入室成劫匪 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟湘玉狠心弃情郎 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/61.jpg" alt="" width="116" height="65"><p>61 前女友盘查私房钱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;局外人识错苦肉计 </p></li>
+						<li><img src="img/62.jpg" alt="" width="116" height="65"><p>62 旧爱已成如烟往事 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;新欢直面惨淡人生 </p></li>
+						<li><img src="img/63.jpg" alt="" width="116" height="65"><p>63 白展堂重回老地方 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟湘玉折磨新跑堂 </p></li>
+						<li><img src="img/64.jpg" alt="" width="116" height="65"><p>64 白展堂受累入冤狱 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;王豆豆为爱跑断腿 </p></li>
+						<li><img src="img/65.jpg" alt="" width="116" height="65"><p>65 小跑堂患上失忆症 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;老情人千里送相思 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/66.jpg" alt="" width="116" height="65"><p>66 郭蔷薇信口传谣言 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;燕小六夜祭一二三 </p></li>
+						<li><img src="img/67.jpg" alt="" width="116" height="65"><p>67 吕秀才练成点穴手 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郭芙蓉含恨归故里 </p></li>
+						<li><img src="img/68.jpg" alt="" width="116" height="65"><p>68 祝无双诚觅心上人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;辛普森设计娶贤妻 </p></li>
+						<li><img src="img/69.jpg" alt="" width="116" height="65"><p>69 佟掌柜收到诅咒信 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;神算子梦断同福店 </p></li>
+						<li><img src="img/70.jpg" alt="" width="116" height="65"><p>70 赛貂蝉沦为小丫环 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;佟湘玉卖店赎仇人 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/71.jpg" alt="" width="116" height="65"><p>71 吕秀才流连吉庆街 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;金湘玉巧设惊魂计 </p></li>
+						<li><img src="img/72.jpg" alt="" width="116" height="65"><p>72 佟掌柜假意改前非 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;白展堂答错选择题 </p></li>
+						<li><img src="img/73.jpg" alt="" width="116" height="65"><p>73 柳星雨夜遇莽郎君 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;李大嘴情定美娇娘 </p></li>
+						<li><img src="img/74.jpg" alt="" width="116" height="65"><p>74 柳月云夜投迷魂散 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;祝无双怒斥冷面人 </p></li>
+						<li><img src="img/75.jpg" alt="" width="116" height="65"><p>75 李大嘴拒演凤求凰 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;燕小六假礼寄真情 </p></li>
+					</ul>
+					<ul>
+						<li><img src="img/76.jpg" alt="" width="116" height="65"><p>76 莫小贝街头遭绑架 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;燕小六智擒假绑匪 </p></li>
+						<li><img src="img/77.jpg" alt="" width="116" height="65"><p>77 谢捕头盘查店中人 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;钱夫人巧取同福店 </p></li>
+						<li><img src="img/78.jpg" alt="" width="116" height="65"><p>78 杨蕙兰酒后诉衷肠 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杜子俊夜访同福店 </p></li>
+						<li><img src="img/79.jpg" alt="" width="116" height="65"><p>79 李大嘴遭遇老情敌 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;杨蕙兰展开新人生 </p></li>
+						<li><img src="img/80.jpg" alt="" width="116" height="65"><p>80 燕小六接到调职令 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;凌腾云夜袭同福店 </p></li>
+					</ul>
+				</div>
+				<div class="cont-synopsis">
+					<div class="synopsis">
+						<ul>
+							<dl>
+								<dt><span>1  郭女侠怒砸同福店，佟掌柜妙点迷路人</span></dt>
+								<dd>
+									　　一个月黑风高的杀人夜，传说中的雌雄双煞从天而降，打乱了同福客栈的安稳日子。家世显赫、从小娇生惯养的郭芙蓉，父亲是一代大侠，始终把她笼罩在阴影之下。从小争胜好胜的她，毅然选择了一条离家出走独闯江湖的路，却在第一站，被扣在了同福客栈，从此开始了艰苦卓绝的杂役生涯……
+								</dd>
+								<br>
+								<dt><span>2  掌柜的慰问装病者，跑堂人收拾寻衅女</span></dt>
+								<dd>
+									　　被扣押在店里的小郭，对白展堂很是不忿，百般挑衅，想与之交战，却总被邢捕头和小六打乱了阵脚，小郭在尝试过所有办法之后，想出了一条毒计，把白展堂困住，并给了他两个选择，一，是跟我交手，二，是就此滚蛋，困境之中的白展堂，毅然选择了一条通往苦难的道路……
+								</dd>
+								<br>
+								<dt><span>3  众伙计沦为小跟班，莫小贝建起八大派</span></dt>
+								<dd>
+									　　由于小郭的文章，小贝考上了白马书院，开始上学。第一天便闯了大祸，先生找上门来，正慌张时，称小贝打破常规、颠覆权威且前途不可限量云云，佟掌柜心头暗喜，依从先生的嘱咐，放纵小贝，一个祸根就此埋下，待先生遍体鳞伤叫苦不迭时，已为时晚矣……
+								</dd>
+								<br>
+								<dt><span>4  李厨子智斗瞎老娘，白盗圣惨遇赌大王</span></dt>
+								<dd>
+									　　大嘴的瞎眼老娘旧疾复发，大嘴情急之下，为安母心，便称自己考中武状元，孰知老娘一听之下，兴致大起，非要跟他回来瞧瞧。在大嘴的哀求下，越演越真，老娘深深地爱上了这个可以为所欲为的地方，死活不肯走了，眼看就要酿成大祸，被逼无奈，只好请出传说中的皇上，跟她好好谈谈…
+								</dd>
+								<br>
+								<dt><span>5  展红绫千里追扒手，郭芙蓉一心迷盗圣</span></dt>
+								<dd>
+									　　一个想考六扇门的小姑娘，阴差阳错地抓住了传说中的盗圣白展堂。为求自保，白展堂讲起了年轻时的荒唐故事，女主角便是小姑娘心目中的偶像展红绫，故事尚未讲完，小姑娘已经坐不住了，情急之下，为偶像辩护，却败在了事实的面前。偶像已经被证明是一个骗子，那六扇门还考不考呢？
+								</dd>
+								<br>
+								<dt><span>6  杨蕙兰比武招郎君，李大嘴施招毙煞神</span></dt>
+								<dd>
+									　　一心想找一个如意郎君的杨蕙兰，带着雇来的假老爹，行走江湖，比武招亲，声称只要能在比武场上打败她，便下嫁之。大嘴起意，伙同白展堂搞了点小阴谋，却被小郭捡了个现成的便宜，被打败的杨蕙兰，一心一意地想嫁给小郭，怎么撵也撵不走了…
+								</dd>
+								<br>
+								<dt><span>7  讨银钱秀才苦费心，泄私愤芙蓉恶作剧</span></dt>
+								<dd>
+									　　上次的比武招亲，小郭欠秀才二钱银子的报名费，秀才乃一介书生，若开口讨钱岂不是失了礼数？为了讨回这二钱银子，秀才用尽了一切办法，却始终未能如愿，反而搭上了所有的东西，最后一不做，二不休，摆出架势，要与小郭同归于尽，此时方知，秀才的种种怪异举动，与自己的魅力毫无关系，女人的自尊，在临界点爆发了…
+								</dd>
+								<br>
+								<dt><span>8  七侠古镇寡妇寻夫，尚儒客栈众人聚首</span></dt>
+								<dd>
+									　　这是一个关于回忆的故事。两年前，佟掌柜刚刚嫁来七侠镇，等候新郎的出现，却阴差阳错将欲行偷窃的白展堂认做新郎，白一边与之纠缠，一边试图偷嫁妆，白的同伙姬无命，准备杀人抢货，白以“咱是贼，不是土匪，不能戗行”为理由拒绝之，两人为此展开了史无前例的大辩论…
+								</dd>
+								<br>
+								<dt><span>9  佟湘玉煞费良苦心，莫小贝梦游影视城</span></dt>
+								<dd>
+									　　小贝调皮，受到众人训斥，情急反扑，将众人大骂一顿之后，离家出走。靠在门边，做了一个怪梦，在梦境中，一切似是而非，人还是那些人，但时代已经变了，在这个奇怪的年代中，她再也不是被大家呵护宠爱的小姑娘了，两相对比之后，才发现，原来大家对自己竟是如此的关爱，一股暖流从心底涌将上来…
+								</dd>
+								<br>
+								<dt><span>10  壮怂胆捕头喝烈酒，施恩惠秀才偷剩菜</span></dt>
+								<dd>
+									　　再过两日，便是秀才先祖的祭日，按照祖训，需要开仓放粮，一贫如洗的秀才，即要遵从祖训，又不能亏着自己，这便如何是好？在大嘴的提示下，秀才想出了一条恶臭熏天的毒计，把孝心和良知投入了泔水的洪流之中……当他被饿得头重脚轻、眼冒金星时，方才领悟到“饱汉子不知饿汉子饥”的真理…
+								</dd>
+								<br>
+								<dt><span>11  扈十娘撒娇勾展堂，赛貂蝉耍赖讹湘玉</span></dt>
+								<dd>
+									　　小郭受佟掌柜之命，把对门的怡红楼砸得七零八落，作为补偿，同福客栈要负责照顾怡红楼从扬州请来的表演嘉宾——扈十娘。一身臭毛病的十娘到来之后，把店里搞得人心惶惶，佟掌柜终于忍无可忍，正打算将其赶走时，却发现，她已经带着白展堂私奔了…
+								</dd>
+								<br>
+								<dt><span>12  受委屈伙计装叛变，求生意老板充大方</span></dt>
+								<dd>
+									　　对门的怡红楼东西好吃，又便宜，抢走了同福客栈的所有生意。佟掌柜痛定思痛，誓要将失去的客人夺回来，大嘴被逼无奈，在众人的怂恿下，搞出了一桌难以下咽的怪菜，佟掌柜竟然欣然接受了，正惶惑难当之时，一头牛将怡红楼的门脸撞塌，所有的客人齐聚同福客栈，准备开吃……
+								</dd>
+								<br>
+								<dt><span>13  争自尊大嘴扮文豪，解危难湘玉设大赛</span></dt>
+								<dd>
+									　　白展堂手受伤，佟掌柜百般呵护，还精心拿来了笑话，读与他听，楼上的阵阵狂笑，使小郭和秀才痛苦不已，于是也笑，欲与楼上抗衡，跟着乱笑一气，被小郭和秀才取笑，伤及自尊，几经逼问，大嘴不禁仰天怒吼
+								</dd>
+								<br>
+								<dt><span>14  邢捕头勇破杀鸡案，燕小六力推防贼法</span></dt>
+								<dd>
+									　　大嘴养的一只红尾巴公鸡，被白展堂误杀，邢捕头为庆祝升职两周年，不由分说，包办了破案工作。在破案过程中，所有人都被列入了怀疑范围，终于招致公愤。被抢白之后的刑捕头奋起反击，越查越险，最后竟然将此案定性为建国以来最有组织最有计划的杀鸡分尸投毒案……
+								</dd>
+								<br>
+								<dt><span>15  雷老五潜入县衙门，佟掌柜钻进牛角尖</span></dt>
+								<dd>
+									　　盗墓者雷老五，赫然看到佟掌柜颈中挂着一块“盗圣”玉牌，便以为她是传说中的盗圣，于是连夜偷走了玉牌，并将之藏到了衙门的扁额后面，想要牌子可以，咱们一起去偷，谁先偷到，这个盗圣的名字就归谁。白展堂接受了挑战，却没想到，雷老五早已挖通了前往衙门的地道……
+								</dd>
+								<br>
+								<dt><span>16  为骗财书商耍手段，欲销赃掌柜吓破胆</span></dt>
+								<dd>
+									　　秀才写了个小说，叫《武林外传》，小郭看过，感觉甚好，于是想将之包装成一代畅销书作家，自己亦可从中获利，筹钱赎身。未成想，找来的书商，不大着调，提出的各项修改意见，几乎将秀才气炸了肺，此时再后悔已经来不及了，按照契约规定，毁约者需支付三千两银子的赔偿金，秀才顿时傻了眼……
+								</dd>
+								<br>
+								<dt><span>17  莫小贝初学衡山派，钱夫人再闹同福店</span></dt>
+								<dd>
+									　　店里来了三个衡山派的剑客，想把小贝找回去当掌门，佟掌柜坚决不同意，小贝的魂儿却被冰糖葫芦勾了去，未经考虑便私自答应下来，七天之后，六大派掌门和各路英雄好汉齐聚同福客栈，庆祝新掌门上位，小贝此时才反应过来，原来这不是在开玩笑……
+								</dd>
+								<br>
+								<dt><span>18  燕小六酒醉乱抓人，郭芙蓉心痴错定情</span></dt>
+								<dd>
+									　　邢捕头要去京城办事，拜托众人帮忙照应小六，尤其不能给他喝酒。白展堂不信，便给小六倒了半碗，亲身领教了撒酒疯的恐怖之处，混乱之后，小六和小郭被铐在了楼梯上。敢铐衙门的人？那还了得？小六情急之下，让众人给出铐自己的理由，给不出，就把大家全都铐回去……
+								</dd>
+								<br>
+								<dt><span>19  李大嘴苦练降龙掌，郭芙蓉难逃生死劫</span></dt>
+								<dd>
+									　　大嘴这些天总是不在，还老是锁着厨房，众人好奇心大起，打开厨房，发现是一堆练武的器具。白展堂跟着大嘴上山探查，发现他能一掌把青石板拍成粉末，待大嘴归来，众人盘问，却什么也问不出来，只知道，神功已成的大嘴，即将离开这里，闯荡江湖……
+								</dd>
+								<br>
+								<dt><span>20  泼皮侯三搅和客栈，女侠芙蓉操办过年</span></dt>
+								<dd>
+									　　这几日，佟掌柜形迹可疑，厨房里先是丢失菜刀，随后，半夜里从她房间里传来一声凄厉的惨叫，到了第二天，丢失的菜刀再次出现，上面有斑斑血迹，此后的一整天，佟掌柜溜出去七八趟，每趟出去，怀里都抱着一个小包袱，…
+								</dd>
+								<br>
+							</dl>
+							<dl style="display: none;">
+								<dt><span>21  寻短见老吴见魔女，赌怨气小郭教武功</span></dt>
+								<dd>
+									　　参加时光旅行团的吴守义，来到这个时代，想一睹传说中的莫小贝真颜，谁知来的早了几年，此时的小贝还只是个十岁的黄毛丫头，吴守义犯了难，花了那么多钱，就想找她帮忙办点事，如此看来，这回旅行，是白来了，正后悔时，白展堂意外发现了他的时光旅行需知，这是什么东西……
+								</dd>
+								<br>
+								<dt><span>22  佟掌柜喜获榴莲果，江小道痛打无辜郎</span></dt>
+								<dd>
+									　　娄知县从广东探亲回来，给每一个纳税大户发了个榴莲，佟掌柜不知何物，四处打听，自诩见多识广的秀才声称，此乃艺术品，是为了表达一个“仁”。佟掌柜信以为真，便买了个博古架，把榴连放在最显眼处，正对众人炫耀时，钱掌柜家的榴莲爆炸了……
+								</dd>
+								<br>
+								<dt><span>23  卖私盐厨子遭盘查，换身份贼头变捕快</span></dt>
+								<dd>
+									　　李大嘴贪财，问私盐贩子买盐，结果贩子被抓，而他漏网。小六为了抓住真正的买家，与佟掌柜商量，到店里来卧底，与此同时，派白展堂暂时充当几天捕快。经过艰苦的卧底之后，非旦没抓住买家，反而招来了试图劫狱的平谷一点红，此人武功高强，一剑能戳死数只苍蝇，小六被迫拿起了久违的钢刀……
+								</dd>
+								<br>
+								<dt><span>24  算命人作法被识破，郭芙蓉洗面遭毁容</span></dt>
+								<dd>
+									　　经历过险境之后，小郭与秀才终成眷属。月色皎洁，小郭问秀才，当初是怎么喜欢上她的，秀才说起了真正的缘由，还记得上次那个算命的吗……小郭被秀才这个不着调的回答气炸了肺，一脚把他踢下屋顶，秀才躺在地上，深情款款地说起了命运的真谛……
+								</dd>
+								<br>
+								<dt><span>25  佟老爹怒嫁不孝女，白展堂误娶无情人</span></dt>
+								<dd>
+									　　佟掌柜的老爹来了，命令闺女放下一切，跟他回汉中。众人情急之下，想了个应急之策，让白展堂假装求婚，要好好照顾湘玉一辈子云云，老爹信以为真，决定立刻举办婚礼，此时再反悔，哪来得及？老爹已经把所有东西都准备好，就等着看他俩拜天地了……
+								</dd>
+								<br>
+								<dt><span>26  求休书小郭盼断肠，思佳人秀才伤透心</span></dt>
+								<dd>
+									　　小郭阴差阳错地嫁给了白展堂，虽然是个假结婚，但秀才心中不忿，醋意频生，最后闹得人仰马翻，为安慰秀才，小郭请求老白休了自己，但老白玩心顿起，执意不肯，小郭想尽办法，也没拿到休书，一边是老白得意的坏笑，一边是秀才凄怨的眼神，她该怎么办……
+								</dd>
+								<br>
+								<dt><span>27  入丐帮老邢丢公职，升捕头小六打官腔</span></dt>
+								<dd>
+									　　邢捕头从京城回来了，由于半路被贼人所抢，只好一路讨饭，最要命的是，加入了丐帮，这要是让衙门知道，官就没法当啦，这个秘密，被同在丐帮的小米知晓，百般敲诈，将邢捕头盘剥一空，最后邢捕头终于忍无可忍，当众承认，此时面对他的，不单是降职的处分……
+								</dd>
+								<br>
+								<dt><span>28  钱夫人贪财生毒计，莫小贝雪耻怒报官</span></dt>
+								<dd>
+									　　钱夫人一直打算侵吞同福客栈，正好小贝从山上采来的毒蘑菇，钱夫人将错就错，吃下毒蘑菇装死，并让钱掌柜见机行事，以图敲诈，钱掌柜心有不甘却不敢与悍妻翻脸，只好强打精神，开始与店里众人周旋。此时才发现，环境的险恶，与现实的残酷，远远超出了他的想象……
+								</dd>
+								<br>
+								<dt><span>29  吕圣人智斗姬无命，佟掌柜火拼展红绫</span></dt>
+								<dd>
+									　　京城地震，姬无命逃狱了。根据可靠线报，他很有可能在这里出现。众人大惊，收拾行装，准备逃跑。刚下楼，就被姬无命堵住了，万幸的事，此时的小姬已经丧失记忆，而他回到这里的唯一目的，就是寻找那遗失已久的记忆。当他终于回忆起一切的时候，笨手笨脚的秀才被独自堵在了墙角……
+								</dd>
+								<br>
+								<dt><span>30  佟石头离乡闯江湖，郭芙蓉回家探父母</span></dt>
+								<dd>
+									　　佟掌柜的弟弟过来送嫁妆，顺便想把白展堂劝回汉中，帮他接管镖局，而他自己想单枪匹马行走江湖，这个主意当然遭到姐姐的反对，可不管怎么劝，弟弟就是不听，最后只好拿小郭说事，瞧见了吧，这就是乱闯江湖的下场。弟弟看着受苦的小郭，同情心大起，决定将其救出苦海……
+								</dd>
+								<br>
+								<dt><span>31  痴秀才思念郭芙蓉，醋掌柜刁难祝无双</span></dt>
+								<dd>
+									　　自从小郭走后，秀才便茶饭不思，寝食难安，几乎入了魔障，佟掌柜看在眼里，急在心头，不得不为秀才举行一场别开生面的遗忘仪式。与此同时，小贝捡到一朵看似笑脸的葵花，勾起了白展堂恐惧的回忆。当秀才选择不再遗忘时，让白展堂坐立不安的恐怖回忆，终于出现了……
+								</dd>
+								<br>
+								<dt><span>32  拼厨艺大嘴成碎催，遇良才诸葛传衣钵</span></dt>
+								<dd>
+									　　无双的一双巧手，使大嘴的厨艺变成了一个笑话，佟掌柜几经考虑，终于决定，让大嘴不要再下厨，取而代之的是各种琐碎而无聊的工作。与此同时，刚从京城退役的御膳房总管——诸葛孔方出现在大嘴的面前，执意要收其为徒，条件是，大嘴必须做出一道让所有人都满意的菜色……
+								</dd>
+								<br>
+								<dt><span>33  西域客欲擒关中侠，涉奇险盗圣救人质</span></dt>
+								<dd>
+									　　姬无命的弟弟姬无病，从西域赶来，唯一目的就是为兄报仇，蒙在鼓里的关中大侠吕秀才，误中奸计，连同无双一起，被姬无病绑架，并且以此相要挟，命众人交出盗神铁牌，否则就将撕票。在走投无路的状态下，小六提出，让白展堂临时冒充传说中的……盗圣！……
+								</dd>
+								<br>
+								<dt><span>34  莫小贝受邀赴衡山，为情困秀才抱错人</span></dt>
+								<dd>
+									　　小贝的师兄陆一鸣从衡山赶来，邀请小贝一起，回衡山创业。佟掌柜百般劝阻，却无法动摇小贝贪吃贪玩的花花心思。为了挽留小贝，众人想尽一起办法，终告失败。与此同时，刚刚进入暧昧状态的秀才和无双，也在阴差阳错的机会下，宣告分手。小贝临行前的一刻，佟掌柜出了一道让她毕生难忘的题目……
+								</dd>
+								<br>
+								<dt><span>35  小魔女执意做红娘，佟湘玉一心修剑谱</span></dt>
+								<dd>
+									　　陆师兄留下了一本衡山剑谱，世上只此一本，却被佟掌柜失手扔到了井里。为了弥补这个过错，佟掌柜走投无路，只好和白展堂一起，找来画师，伪造了一本假的剑谱，却在这个过程中，发现了一个隐藏了许久的秘密，小贝的太爷爷，衡山派的创始人，竟然是那种人……
+								</dd>
+								<br>
+								<dt><span>36  遇追风盗圣吓破胆，见芙蓉秀才惊断魂</span></dt>
+								<dd>
+									　　来无影、去无踪的追风，是小郭的三师兄，也是四大神捕之一，当他出现在胆小如鼠的白展堂面前，表面的平静都将改变。秀才和无双，重新进入了暧昧的状态，却被小郭的意外到来打破了，一男，二女，秀才将如何选择？面对神捕的发难，白展堂将束手待擒，还是远走高飞？
+								</dd>
+								<br>
+								<dt><span>37  心不甘小郭拼才艺，情不愿无双走天涯</span></dt>
+								<dd>
+									　　经历过短暂的分别之后，秀才更懂得珍惜，但小郭却被他的意外出墙，搞得心烦意乱。两人的关系，似乎不可能回到原点了。为了捍卫爱情，小郭对无双使出了非常手段，饱受伤害、甚至试图离开的无双，终于忍无可忍，提出了才艺比赛的想法。众目睽睽之下，两个女人之间的战争，一触即发……
+								</dd>
+								<br>
+								<dt><span>38  迎挑战小贝当掌柜，出狠招湘玉赢赌局</span></dt>
+								<dd>
+									　　小贝的先生回家过中秋节，小贝却隐瞒不报，还擅自约了同学去钓鱼，被抓包之后，小贝死不悔改，还口出恶言，佟掌柜为了给她长点记性，提出，小贝可以当三天的掌柜，三天之内，只要能赚到三两银子，以后便不再管她，小贝欣然接受了挑战……
+								</dd>
+								<br>
+								<dt><span>39  吕秀才得理不饶人，郭芙蓉自食苦月饼</span></dt>
+								<dd>
+									　　无双临走前，曾经托小郭向秀才转交一件亲手缝制的衣裳，小郭却由于嫉妒，私自扣下了衣裳，后来真相大白，秀才大发雷霆，宣告分手。小郭为了挽回爱情，作出了令人发指的举动……中秋将至，钱掌柜托大嘴定制月饼，要求是天底下独一份，大嘴苦思冥想之后，把月饼做成了汉堡包……
+								</dd>
+								<br>
+								<dt><span>40  庆中秋好梦一日游，历磨难客栈重聚首</span></dt>
+								<dd>
+									　　中秋之夜，众人思乡心切，情绪低落，小郭认为，如果当初没来这儿，而是继续闯荡江湖，没准现在已经是一代女侠了。大嘴说，如果我当初一直当捕头，没准现在已经是四大神捕。白展堂认为，如果当初学的是医术，现在已经是一代神医了。众人的假设，在奇妙的瞬间，梦想成真……
+								</dd>
+								<br>
+							</dl>
+							<dl style="display: none;">
+								<dt><span>41  痴情汉重逢梦中人，糊涂女初识菜刀门</span></dt>
+								<dd>
+									　　大嘴的梦中情人杨蕙兰翩然而至，带来了传说中的玄铁菜刀，每把一两银子，三把起卖。大嘴泡妞心切，不惜向所有人借钱，买了三把菜刀。交易完成，却被告之，从此他便是菜刀门的人，终生不能脱离，此时才意识到，这是个天大的骗局，而菜刀门的帮主，竟然是……
+								</dd>
+								<br>
+								<dt><span>42  燕小六大摆迷魂阵，千面人关底显真身</span></dt>
+								<dd>
+									　　关中四十六县的衙门官印，在一夜之间被偷走，墙上还写着：盗圣到此一游。据可靠情报，盗圣的下一个目标，就是七侠镇。而娄知县为了摆脱干系，把官印放在小六身上，小六走投无路，住进了同福客栈，与众人一起战战兢兢地等候着盗圣的大驾光临……
+								</dd>
+								<br>
+								<dt><span>43  恶婆婆率众闹洞房，善媳妇受虐一身伤</span></dt>
+								<dd>
+									　　白三娘准备带白展堂行走江湖，佟掌柜为了留住白展堂，不惜祭出绝招……我们俩已经成婚了。白三娘将信将疑，安排了一个别开生面的洞房之夜。第二天，在一个不该发生的错误之后，作为婆婆的白三娘，对可怜的佟掌柜展开了惨无人道的欺凌，与永无休止的考验……
+								</dd>
+								<br>
+								<dt><span>44  吕秀才误收嗜血徒，白展堂临终吐心声</span></dt>
+								<dd>
+									　　姬无命的师父公孙乌龙，是天下武功最高的人，当他赫然出现在眼前时，秀才已经无处可逃，一个回合之后，公孙乌龙拜倒在秀才面前——他是来赎罪的！一个双手沾满鲜血的杀人魔王，如何弃恶从善改过自新？这个看似不可能的任务，就这么交到了秀才颤抖的双手之上……
+								</dd>
+								<br>
+								<dt><span>45  通缉犯转眼成病患，阶下囚洗心重作人</span></dt>
+								<dd>
+									　　白展堂意外地获得了一块免罪金牌，顿时变得神清气爽、耀武扬威，为了一偿多年前的夙愿，他决定到传说中的衙门转转……可惜还没等进门，他便因为一个阴差阳错的误会，被当成狂犬病患，关押了起来，几经折腾，他跟着难友逃狱成功，却发现，免罪金牌上写着——逃狱者，罪无可赦……
+								</dd>
+								<br>
+								<dt><span>46  神秘客夜访七侠镇，莫掌门血战灯市街</span></dt>
+								<dd>
+									　　小贝收到了一封迟来的邀请函，错过了与武学宗师华山论剑的机会，正在吵闹时，华山派的掌门岳松涛登门拜访，此时方知，所谓的华山论剑，是为了推举五岳盟主，另外几个剑派的掌门，已经被生性残忍的岳松涛斩于剑下，由此，五岳盟主将要从岳松涛和小贝之间选择一个。一场街头血战，正式开始……
+								</dd>
+								<br>
+								<dt><span>47  小姐妹重逢暗叫劲，老夫妻患难见真情</span></dt>
+								<dd>
+									　　佟掌柜的幼时玩伴忽然光临，没聊几句就发现，韩娟性情大变，嫁入豪门的她，已经不复少女时的纯情与质朴，佟掌柜被韩娟的狂言激得虚荣心大起，打肿脸充胖子，拖上大家，跟韩娟死磕到底。两个回合之后，佟掌柜财力不支、败下阵来，正绝望时，却赫然发现，韩娟与身边的老仆人，有着某种暧昧关系……
+								</dd>
+								<br>
+								<dt><span>48  败家女随口开条件，穷哥俩合伙办武馆</span></dt>
+								<dd>
+									　　白展堂意识到，自己要房没房，要钱没钱，想娶佟湘玉，似乎不太靠谱，于是想出门赚点钱，再作下一步打算。佟掌柜却舍不得他走，在小郭的建议之下，佟掌柜提出，先得拿出赚钱方案，否则不给盘缠。在准备方案的过程中，秀才也意识到钱财的重要性，兄弟俩一合计，开武馆吧……
+								</dd>
+								<br>
+								<dt><span>49  慕容子专访莫掌门，吕秀才定义真侠士</span></dt>
+								<dd>
+									　　《江湖月报》的特邀撰稿人，不远万里，前来采访传说中的五岳盟主，小贝正得意之际，却发现，这位慕容姑娘似乎不太地道，什么话到她的嘴里，全成了阴谋，和见不得人的真相。经过一番商榷之后，众人决定，派秀才上场，让这位资深记者见识一下，什么才叫真正的大侠……
+								</dd>
+								<br>
+								<dt><span>50  邢捕头变身小杂役，燕小六临别显真情</span></dt>
+								<dd>
+									　　一向蹭吃蹭喝绝不手软的邢育森，忽然变了性，在短短几天内，把自己改变成一个正义凛然的公仆。经过众人的调查和盘问，才知道，十八里铺有一个新的工作机会，邢捕头将面临严酷的监察，为了得到新工作，邢捕头在客栈经历了为时三天的脱胎换骨大考验……
+								</dd>
+								<br>
+								<dt><span>51  采花盗意外现真身，虎外甥作媒为报恩</span></dt>
+								<dd>
+									　　三个月前，无双无意中救了一只猫，这只猫，为众人带来了无尽烦恼，正到众人设法铲除此害时，小六来报，最近出现了一个采花大盗，刚把十八里铺祸害完，这两天就要来七侠镇了。为了做好防范，众人想尽一切办法，然而人算不如天算，采花盗还是如期出现，被蒙在鼓里的佟掌柜，一步步走向了危险的深渊……
+								</dd>
+								<br>
+								<dt><span>52  佟石头初尝爱滋味，祝无双投身六扇门</span></dt>
+								<dd>
+									　　佟石头和无双相遇之后，两人都处在一种暧昧的状态中，谁也不敢开口说爱。旁观者看得心急，纷纷想出各种馊点子，想把佟石头打扮成一个像样的男子汉，谁知事与愿违，本来对石头颇有好感的无双，在众人帮了数次倒忙之后，对石头的好感越来越淡，最后竟然提出了分手……
+								</dd>
+								<br>
+								<dt><span>53  燕捕头研发绝密令，包侍郎得理不饶人</span></dt>
+								<dd>
+									　　无双新上任，小六为了彰显官威，给无双制定了一系列不靠谱的规则，把自己和无双折腾得焦头烂额。与此同时，从云南来的包大仁和京城捕快展堂途径此地，被小六和无双阴差阳错地放倒在地，并捆了起来，不久发觉，这位包大仁竟然是钦差大人，此时道歉，已经来不及了……
+								</dd>
+								<br>
+								<dt><span>54  苦刑犯逃离同福店，黑衣人连夜救钦犯</span></dt>
+								<dd>
+									　　为了支走怒发冲冠的包大仁，店中众人想了数个方法，却始终没能如愿，在数个回合之后，众人想出最后一个狠招，终于使包大仁心生恐惧，准备逃走，而包大仁逃走的过程，更是坎坷，当众人终于成功地骗走包大仁之后，倒霉的包，竟然被充满正义感的小米送了回来……
+								</dd>
+								<br>
+								<dt><span>55  佟掌柜沦为十六姨，包大仁欢度洞房夜</span></dt>
+								<dd>
+									　　包大仁终于还是没走成，当他识破了众人的诡计之后，索性一不做二不休，在同福客栈逗留下来。在与众人最后一轮交战之后，包大获全胜，并欲迎娶佟掌柜，让其给自己当十六姨太，否则店内众人将面临无穷无尽的麻烦和官司，佟经过再三考虑，答应了包大仁……
+								</dd>
+								<br>
+								<dt><span>56  展侍卫私放真刺客，祝无双泪别假卧底</span></dt>
+								<dd>
+									　　在筹备包和佟的婚礼之时，白展堂心中愤闷，几欲崩溃。与此同时，东厂总管曹公公派来的刺客，准备刺杀包大仁，幸未得手，此时方知，包大仁的官是买来的，他已经陷入了一个极大的阴谋之中，包的家人已被曹公公斩尽杀绝，此时的包，与众人一样，已经没有任何退路……
+								</dd>
+								<br>
+								<dt><span>57  李大嘴装疯孵鸡蛋，佟掌柜设宴套难题</span></dt>
+								<dd>
+									　　大嘴为了请几天假回去看老娘，想尽了各种办法，无奈佟就是不准假。大嘴走投无路，正绝望时，误认为隔壁谢掌柜家的伙计疯了，不但好吃好喝伺候着，还不用干活。大嘴一见有这等好事，便原样照搬，也装了一次疯，却被小六当成真的疯子抓了起来……
+								</dd>
+								<br>
+								<dt><span>58  小师妹现身七侠镇，大师姐难解心头愤</span></dt>
+								<dd>
+									　　由于众人作弊，大嘴做对十六题中的十五道测试题，被小六当成变态杀人狂，准备带回衙门候审，经过苦劝，和一番斗争之后，小六撒手而去，大嘴带着枷锁，却无钥匙，众人各自想了办法，试图帮大嘴卸枷，却越套越紧，几乎断气。危急关头，小六终于良心发现，回来搭救，却发现，锁孔已经被堵上了……
+								</dd>
+								<br>
+								<dt><span>59  佟掌柜魂归小西天，睡美人变身火凤凰</span></dt>
+								<dd>
+									　　佟掌柜的小师妹南宫残花大驾光临，向众人传播环保主义，佟为了摆脱纠缠，假装摔倒，躺在床上，成了一个睡不醒的植物人。众人不知真相，各自心急，白展堂在佟的耳边说尽各种甜言蜜语，佟听得激动万分，更是不想及时醒来，一方想装睡，一方想唤醒，各自用尽办法，展开了激烈的拉锯战……
+								</dd>
+								<br>
+								<dt><span>60  李大嘴入室成劫匪，佟湘玉狠心弃情郎</span></dt>
+								<dd>
+									　　佟吃了千年人参之后，心头火起，变成一个不折不扣的热血青年。在药力作用下，佟作出了一系列倒行逆施的举动，把众人折腾得苦不堪言，小郭扫大街，小贝发传单，秀才扫盲，大嘴挨家挨户拜访孤寡老人，在此过程中，大嘴由于不当言行，被人当成了劫匪，危在旦夕……
+								</dd>
+								<br>
+							</dl>
+							<dl style="display: none;">
+								<dt><span>61  前女友盘查私房钱，局外人识错苦肉计</span></dt>
+								<dd>
+									　　佟一气之下，与白分手，分手之后，两人都很后悔，但碍于面子，谁也不肯说破。店内众人看在眼里，急在心头，想帮忙却又不知从何帮起，白为了面子，向秀才传授了各种不靠谱的怪招，却始终不能奏效。在一连串的误会之后，佟和白终于有机会面对面坐下，开始盘查白的私房钱……
+								</dd>
+								<br>
+								<dt><span>62  旧爱已成如烟往事，新欢直面惨淡人生</span></dt>
+								<dd>
+									　　经历了数次误会和打击之后，白和佟的感情终于告一段落。白经过再三考虑，选择离开。第二天清晨，佟怀着破碎的心，咬着牙迎接新的人生。作为掌柜，她不希望伙计们看到她脆弱的一面，作为女人，她以为说几句坚强的话，就能暂时忘却伤痛，过于倔强的性格，使她选择了一个非常危险的新跑堂……
+								</dd>
+								<br>
+								<dt><span>63  白展堂重回老地方，佟湘玉折磨新跑堂</span></dt>
+								<dd>
+									　　众人原本对新来的跑堂心怀疑虑，在佟的一番训导之后，终于决定放下成见，重新接受这个新人，只有小贝还坚持，决定苦等白展堂回来。而本是山贼的新跑堂在店里干了几天之后，把店内的情况摸得一清二楚，准备当夜展开洗劫，小贝知悉真相之后，却没人相信她，正心急如焚，山贼如期光临了……
+								</dd>
+								<br>
+								<dt><span>64  白展堂受累入冤狱，王豆豆为爱跑断腿</span></dt>
+								<dd>
+									　　长相酷似白展堂的黄豆豆到来之后，所有人都确信无疑，把他当成了白展堂，直到小六和无双告知，真的白展堂已经在十八里铺落网了。佟前去探监，心急如焚，经过一番思量，佟决定进京搭救白展堂。而黄豆豆的表现非常怪异，为了不让佟做傻事，他一人分饰两个角色，楼上楼下跑断了腿（其实黄豆豆就是白展堂）……
+								</dd>
+								<br>
+								<dt><span>65  小跑堂患上失忆症，老情人千里送相思</span></dt>
+								<dd>
+									　　白展堂一不留神，后脑勺撞墙，为了偷懒不干活，他谎称得了脑震荡。众人为了惩罚他，想出了一个绝妙的方法，把白展堂迷晕之后，所有人都谎称从不认识此人，白展堂几欲崩溃……第二天，白展堂的老情人展红绫大驾光临，酒过三旬，展对白吐露心声，她竟然是从婚礼上逃出来的，就为了再见白一面……
+								</dd>
+								<br>
+								<dt><span>66  郭蔷薇信口传谣言，燕小六夜祭一二三</span></dt>
+								<dd>
+									　　众人从广阳府游玩归来，赫然发现，店已经被人搬空了，正手忙脚乱时，小郭的堂妹郭蔷薇忽然出现，原来也是从家逃出来的，打算学姐姐的样子闯荡江湖。经过几番会谈，众人才知道，小郭前次回家，对妹妹撒下了弥天大谎，把自己吹嘘成一个盖世豪侠，真相大白之后，妹妹抖出了一个令小郭胆战心惊的秘密……
+								</dd>
+								<br>
+								<dt><span>67  吕秀才练成点穴手，郭芙蓉含恨归故里</span></dt>
+								<dd>
+									　　小郭的老爹郭巨侠准备来看女儿，为了使秀才能在爹的面前挺直腰板，小郭对秀才展开了密集培训，而从未练过武功的秀才，在高强度的培训之下，显得力不从心。两天后，小郭的父亲终于到了，众人布下的所有谜团，都被老爹一眼识破，并由此开始怀疑秀才的人品，震怒之下，要带小郭回京城……
+								</dd>
+								<br>
+								<dt><span>68  祝无双诚觅心上人，辛普森设计娶贤妻</span></dt>
+								<dd>
+									　　小郭欠了无双一个天大的人情，为了尽早还上，小郭决定为无双相亲。被蒙在鼓里的无双，作了一系列测试题之后，选择了刚刚回国的辛普森。这个满嘴洋文的生意人，对无双一见钟情，见面第二次就送来了几大箱聘礼，众人收下之后，无双盛怒，准备退礼，却发现，已经中了辛普森的圈套……
+								</dd>
+								<br>
+								<dt><span>69  佟掌柜收到诅咒信，神算子梦断同福店</span></dt>
+								<dd>
+									　　佟掌柜忽然收到了一封神秘来信，信中要求：三日内请将此信转发七封，必须是最亲近的人，否则将倾家荡产家破人亡，最爱之人死于非命……发信人是佟从小到大的朋友韩娟。佟盛怒之下，打算找韩娟算帐，谁知她竟然自己送上门来，并矢口否认此事，这封信究竟是谁发的呢？
+								</dd>
+								<br>
+								<dt><span>70  赛貂蝉沦为小丫环，佟湘玉卖店赎仇人</span></dt>
+								<dd>
+									　　佟掌柜的老对手赛貂婵，忽然光临，而她的身份，已经从威风八面的大掌柜变成了可怜兮兮的小丫环，原来的丫环小翠，由于戏剧性的命运，变成了颐指气使的大小姐。身份互换之后，小翠对赛貂婵横眉冷对，甚至拳脚相加，众人看不过眼去，想打抱不平，小翠却道出了隐藏已久的心声……
+								</dd>
+								<br>
+								<dt><span>71  吕秀才流连吉庆街，金湘玉巧设惊魂计</span></dt>
+								<dd>
+									　　秀才去十八里铺收账，迟迟不归，小郭心急，派人去打探。小六回来之后，道出了一个天大的秘密，秀才竟然流连青楼，与老板娘眉来眼去，玩得正欢。召开了紧急会议之后，众人轮流过去收拾秀才，却一个都没有回来，老白，大嘴，甚至是小六，都被充满魅力的老板娘留在了十八里铺……
+								</dd>
+								<br>
+								<dt><span>72  佟掌柜假意改前非，白展堂答错选择题</span></dt>
+								<dd>
+									　　由于金湘玉的豪爽性格，和善良心肠，佟被比了下去。为了赢回面子，佟让众人提要求，只要提出来，她保证改，众人真提，佟却假改，最后激起众怒……佟私下里问白，如果当初同时碰到她和金湘玉，会选谁做女朋友，白告之，也许会选金湘玉，佟顿时醋海翻泼，掀起了惊涛骇浪……
+								</dd>
+								<br>
+								<dt><span>73  柳星雨夜遇莽郎君，李大嘴情定美娇娘</span></dt>
+								<dd>
+									　　大嘴清晨醒来，发现枕边躺了个姑娘，经过盘问方知，昨夜酒醉之时，两人已经私订终身。一心等待蕙兰归来的大嘴悔恨不堪，却又拗不过柳星雨的一片真情。经过内心挣扎和斗争之后，大嘴终于决定放眼未来，用实际行动去开创新的人生，此时却发现，柳的背景，并不是那么干净……
+								</dd>
+								<br>
+								<dt><span>74  柳月云夜投迷魂散，祝无双怒斥冷面人</span></dt>
+								<dd>
+									　　大嘴和柳星雨，经过几番磨难，终于选择在一起。婚礼前，柳的妹妹忽然出现，姐妹二人，原来是专门用迷药进行偷窃的女贼，此次前来，真正的目的，是传说中盗圣的宝藏。被蒙在鼓里的大嘴，还在幸福地憧憬着未来。另一方，柳星雨被大嘴的真情感动，陷入了深深的矛盾之中……
+								</dd>
+								<br>
+								<dt><span>75  李大嘴拒演凤求凰，燕小六假礼寄真情</span></dt>
+								<dd>
+									　　众人忽然发现，大嘴和小六，似乎都对无双有意思。大嘴抢着帮无双干活，小六送无双东西，而无双被这二人忽如其来的反常举动，搞的心乱如麻……为了测试大嘴的心声，小郭给他做了一道测试题，内心深处，到底喜欢无双还是蕙兰，大嘴未经思考便脱口而出——无双！而无双的答案则是大嘴……
+								</dd>
+								<br>
+								<dt><span>76  莫小贝街头遭绑架，燕小六智擒假绑匪</span></dt>
+								<dd>
+									　　冬天到了，小贝闹着要滑冰，佟当然不肯，小贝跟嫂子吵了一架之后，愤愤离家。不久以后，众人在店门口收到了一封绑架信，紧接着，第二、第三封绑架信如期而至，从衡阳来的谢捕头，专门办绑架案，根据他的分析，这是一次恶性案件，十有八九会被撕票，众人陷入了深深的恐慌之中……
+								</dd>
+								<br>
+								<dt><span>77  谢捕头盘查店中人，钱夫人巧取同福店</span></dt>
+								<dd>
+									　　“经验丰富”的谢捕头把目光对准了店内众人，经过一番盘查之后，众人发现，谢捕头是个水货，于是想尽一切办法将其支走。此时，久违的第四封信终于出现了。对方要求四千两银子，而佟却拿不出那么多钱，情急之下，终于决定，把客栈卖给佟的老对头钱夫人……
+								</dd>
+								<br>
+								<dt><span>78  杨蕙兰酒后诉衷肠，杜子俊夜访同福店</span></dt>
+								<dd>
+									　　大嘴的梦中情人杨蕙兰忽然来到，大嘴心花怒放，以为春天终于来了。众人却发现，杨蕙兰的目的，并不是那么单纯，苦劝大嘴未果，只好由他胡闹。与大嘴交谈之后，蕙兰心中不忍，终于对大嘴吐露心声——我已经嫁人了，与此同时，众人发现，蕙兰身上的银票，是从铜岭富户杜子俊家里偷来的……
+								</dd>
+								<br>
+								<dt><span>79  李大嘴遭遇老情敌，杨蕙兰展开新人生</span></dt>
+								<dd>
+									　　杜子俊到来后，众人才知道，杨蕙兰嫁的人就是他。而那些失窃的银票和珠宝，乃是杜子俊的老娘设下的圈套，老太太不赞成儿子与蕙兰的婚姻，想用这个方法分开两人。一方是束手无策却深深相爱的苦命鸳鸯，一方是有钱有势却冷酷无情的幕后黑手，帮还是不帮，大嘴陷入了深深的矛盾之中……
+								</dd>
+								<br>
+								<dt><span>80  燕小六接到调职令，凌腾云夜袭同福店</span></dt>
+								<dd>
+									　　小六终于接到了调职令，数日后奔赴京城就职，众人欣喜之余，不禁有些惆怅。小六告之，新任的捕快是西安凌家的凌腾云，白大惊失色。凌腾云曾在少年时与白交手，差一点擒获，白非常担心日后会被认出，经过佟的劝导，白心下稍安。凌腾云到来之后，种种迹象表明，他已经认出了白展堂是少年时期他曾追捕过的盗圣……
+								</dd>
+								<br>
+							</dl>
+						</ul>
+					</div>
+				</div>
+				<div class="cont-num">
+					<ul>
+						<li><a href="javascript:;">1</a></li>
+						<li><a href="javascript:;">2</a></li>
+						<li><a href="javascript:;">3</a></li>
+						<li><a href="javascript:;">4</a></li>
+						<li><a href="javascript:;">5</a></li>
+						<li><a href="javascript:;">6</a></li>
+						<li><a href="javascript:;">7</a></li>
+						<li><a href="javascript:;">8</a></li>
+						<li><a href="javascript:;">9</a></li>
+						<li><a href="javascript:;">10</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">11</a></li>
+						<li><a href="javascript:;">12</a></li>
+						<li><a href="javascript:;">13</a></li>
+						<li><a href="javascript:;">14</a></li>
+						<li><a href="javascript:;">15</a></li>
+						<li><a href="javascript:;">16</a></li>
+						<li><a href="javascript:;">17</a></li>
+						<li><a href="javascript:;">18</a></li>
+						<li><a href="javascript:;">19</a></li>
+						<li><a href="javascript:;">20</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">21</a></li>
+						<li><a href="javascript:;">22</a></li>
+						<li><a href="javascript:;">23</a></li>
+						<li><a href="javascript:;">24</a></li>
+						<li><a href="javascript:;">25</a></li>
+						<li><a href="javascript:;">26</a></li>
+						<li><a href="javascript:;">27</a></li>
+						<li><a href="javascript:;">28</a></li>
+						<li><a href="javascript:;">29</a></li>
+						<li><a href="javascript:;">30</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">31</a></li>
+						<li><a href="javascript:;">32</a></li>
+						<li><a href="javascript:;">33</a></li>
+						<li><a href="javascript:;">34</a></li>
+						<li><a href="javascript:;">35</a></li>
+						<li><a href="javascript:;">36</a></li>
+						<li><a href="javascript:;">37</a></li>
+						<li><a href="javascript:;">38</a></li>
+						<li><a href="javascript:;">39</a></li>
+						<li><a href="javascript:;">40</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">41</a></li>
+						<li><a href="javascript:;">42</a></li>
+						<li><a href="javascript:;">43</a></li>
+						<li><a href="javascript:;">44</a></li>
+						<li><a href="javascript:;">45</a></li>
+						<li><a href="javascript:;">46</a></li>
+						<li><a href="javascript:;">47</a></li>
+						<li><a href="javascript:;">48</a></li>
+						<li><a href="javascript:;">49</a></li>
+						<li><a href="javascript:;">50</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">51</a></li>
+						<li><a href="javascript:;">52</a></li>
+						<li><a href="javascript:;">53</a></li>
+						<li><a href="javascript:;">54</a></li>
+						<li><a href="javascript:;">55</a></li>
+						<li><a href="javascript:;">56</a></li>
+						<li><a href="javascript:;">57</a></li>
+						<li><a href="javascript:;">58</a></li>
+						<li><a href="javascript:;">59</a></li>
+						<li><a href="javascript:;">60</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">61</a></li>
+						<li><a href="javascript:;">62</a></li>
+						<li><a href="javascript:;">63</a></li>
+						<li><a href="javascript:;">64</a></li>
+						<li><a href="javascript:;">65</a></li>
+						<li><a href="javascript:;">66</a></li>
+						<li><a href="javascript:;">67</a></li>
+						<li><a href="javascript:;">68</a></li>
+						<li><a href="javascript:;">69</a></li>
+						<li><a href="javascript:;">70</a></li>
+					</ul>
+					<ul>
+						<li><a href="javascript:;">71</a></li>
+						<li><a href="javascript:;">72</a></li>
+						<li><a href="javascript:;">73</a></li>
+						<li><a href="javascript:;">74</a></li>
+						<li><a href="javascript:;">75</a></li>
+						<li><a href="javascript:;">76</a></li>
+						<li><a href="javascript:;">77</a></li>
+						<li><a href="javascript:;">78</a></li>
+						<li><a href="javascript:;">79</a></li>
+						<li><a href="javascript:;">80</a></li>
+					</ul>
+				</div>
+				<div class="cont-pic">
+					<div class="pic"><img src="img/q1.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q2.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q3.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q4.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q5.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q6.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q7.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q8.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q9.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q10.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q11.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q12.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q13.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q14.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q15.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q16.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q17.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q18.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q19.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q20.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q21.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q22.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q23.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q24.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q25.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q26.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q27.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q28.jpg" alt="" width="200"></div>
+					<div class="pic"><img src="img/q29.jpg" alt="" width="200"></div>
+				</div>
+				<div class="cont-upto">
+					
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/index.js"></script>
+</body>
+</html>
