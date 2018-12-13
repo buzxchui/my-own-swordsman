@@ -200,13 +200,14 @@ a {
             .box .content .content-in .cont-l .list .list-r ul {
               border-radius: 3px;
               border: 1px solid #5aa700;
-              overflow: hidden;
-              width: 136px; }
+              overflow: hidden; }
               .box .content .content-in .cont-l .list .list-r ul li {
                 float: left; }
                 .box .content .content-in .cont-l .list .list-r ul li a {
                   line-height: 30px;
-                  padding: 10px 10px;
+                  width: 68px;
+                  display: block;
+                  text-align: center;
                   color: #5aa700;
                   font-size: 12px; }
               .box .content .content-in .cont-l .list .list-r ul .selected {
@@ -340,7 +341,8 @@ a {
         line-height: 40px;
         background-color: #fff;
         box-shadow: 0 0 5px 0 rgba(2, 2, 2, 0.2);
-        display: none; }
+        display: none;
+        cursor: pointer; }
         .box .content .content-in .cont-upto:after, .box .content .content-in .cont-upto:before {
           content: '';
           position: absolute;

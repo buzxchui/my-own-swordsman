@@ -237,12 +237,13 @@ a{
 							border-radius: 3px;
 							border: 1px solid #5aa700;
 							overflow: hidden;
-							width: 136px;
 							li{
 								float: left;
 								a{
 									line-height: 30px;
-									padding: 10px 10px;
+									width: 68px;
+									display: block;
+									text-align: center;
 									color: #5aa700;
 									font-size: 12px;
 								}
