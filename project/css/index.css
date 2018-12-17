@@ -22,16 +22,10 @@ a {
   width: 100%;
   min-width: 1349px;
   background-color: #f8f8f8; }
-
-  /*顶部背景图片*/
-
   .box header {
     width: 100%;
     height: 400px;
-    background: url(img/logo2.jpg) no-repeat center 0; }
-
-  /*介绍*/
-
+    background: url(../img/logo2.jpg) no-repeat center 0; }
   .box .introduce {
     width: 100%;
     margin-top: -100px;
@@ -79,9 +73,6 @@ a {
           .box .introduce .int-in .info .brief-intro em {
             color: #999;
             font-style: normal; }
-
-  /*轮播图*/
-
   .box .carousel {
     width: 80%;
     margin: 0 auto;
@@ -158,14 +149,23 @@ a {
           bottom: 1px;
           right: -40px;
           font-style: normal; }
-
-  /*主要内容*/
-
+    .box .carousel .caro-search {
+      width: 292px;
+      height: 318px;
+      border: 1px solid #000;
+      position: absolute;
+      top: 44px;
+      right: -14px; }
+      .box .carousel .caro-search .search-in h3 {
+        text-align: center; }
+      .box .carousel .caro-search .search-in .search-list {
+        text-align: center; }
+        .box .carousel .caro-search .search-in .search-list input {
+          margin-bottom: 10px; }
+      .box .carousel .caro-search .search-in .title {
+        text-align: center; }
   .box .content {
     width: 100%; }
-
-  /*剧集列表和分集剧情*/
-
     .box .content .cont-top {
       margin-top: 20px;
       width: 100%;
@@ -196,9 +196,6 @@ a {
       margin: 0 auto;
       overflow: hidden;
       position: relative; }
-
-  /*左侧集数图文切换*/
-
       .box .content .content-in .cont-l {
         width: 70%;
         height: 40px;
@@ -260,9 +257,6 @@ a {
                 border-color: #5aa700; }
                 .box .content .content-in .cont-l .list .list-num ul .selected a {
                   color: #5aa700; }
-
-  /*右侧人物简介*/
-
       .box .content .content-in .cont-r {
         width: 29%;
         float: left;
@@ -288,9 +282,6 @@ a {
               vertical-align: top;
               margin-left: 5px;
               margin-top: 10px; }
-
-  /*具体集数名称*/
-
       .box .content .content-in .cont-bottom {
         width: 70%;
         position: absolute;
@@ -305,9 +296,6 @@ a {
             margin-bottom: 22px; }
             .box .content .content-in .cont-bottom ul li p {
               font-size: 12px; }
-
-  /*分集剧情*/
-
       .box .content .content-in .cont-synopsis {
         width: 70%;
         position: absolute;
@@ -319,9 +307,6 @@ a {
         .box .content .content-in .cont-synopsis .synopsis dd {
           font-size: 14px;
           line-height: 18px; }
-
-  /*数字集数*/
-
       .box .content .content-in .cont-num {
         width: 70%;
         position: absolute;
@@ -347,9 +332,6 @@ a {
               .box .content .content-in .cont-num ul li a:hover {
                 background-color: #5aa700;
                 color: #fff; }
-
-  /*剧照瀑布流*/
-
       .box .content .content-in .cont-pic {
         width: 70%;
         position: absolute;
@@ -364,9 +346,6 @@ a {
             border: 1px solid #ccc;
             border-radius: 4px;
             vertical-align: top; }
-
-  /*反顶*/
-
       .box .content .content-in .cont-upto {
         width: 40px;
         height: 40px;

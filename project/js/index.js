@@ -313,7 +313,37 @@ $(document).ready(function () {
 	});
 
 	//返回顶部按钮的动画效果>
-		
+	
+
+	//<ajax调用信息
+	
+	$(".search-list input").on('keyup',function () {
+		var val=parseInt($(this).val());
+		$.get('search.json',{'a':val},function (data) {
+			for (var i = 0; i < data.length; i++) {
+				if (val===data[i][0].a) {
+					$('.search-list img').attr("src",data[i][0].results[0].src);
+					$(".title").css('fontSize','12px').html(data[i][0].results[0].p);
+					$(".episodes").css('fontSize','15px').html(data[i][0].results[0].detail);
+				}
+			}
+		},'json');
+	});
+
+	//键盘只能输入数字
+
+	$('body').on('keypress',".search-list input",function (event) {
+		if (event.type==='keypress') {
+			var keyCode = event.keyCode ? event.keyCode : event.charCode ;
+
+			if (keyCode !== 0 && (keyCode <48 || keyCode >57) && keyCode!==8 && keyCode !==37 && keyCode !==39 && keyCode !==46) {
+				return false;
+			}
+		}
+	});
+	
+	//ajax调用信息>
+	
 	//获取输入的val值在arr数组中的index
 	
 	function getIndex(arr, val) {
