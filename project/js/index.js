@@ -56,9 +56,11 @@ $(document).ready(function () {
 	var img=$(".caro-img");
 	var index=0;
 	var timer=null;
+
 	$(".caro-img").each(function (i) {
 		$(".dot").append('<span class="dot-in"></span>');
 	});
+
 	$(".dot-in:first").addClass('current');
 	timer=setInterval(function () {
 		img.eq(index).animate({
@@ -81,6 +83,7 @@ $(document).ready(function () {
 			$(".dot-in").eq(index).addClass('current');
 		}
 	},4000);
+
 	$(".caro-in").mouseenter(function () {
 		clearInterval(timer);
 	}).mouseleave(function () {
@@ -106,6 +109,7 @@ $(document).ready(function () {
 		}
 	},4000);
 	});
+
 	$(".caro-l").on('click',function () {
 		img.eq(index).animate({
 			'left':500
@@ -129,6 +133,7 @@ $(document).ready(function () {
 			$(".dot-in").eq(index).addClass('current');
 		}
 	});
+
 	$(".caro-r").on('click',function () {
 		img.eq(index).animate({
 			'left':-500
@@ -150,6 +155,7 @@ $(document).ready(function () {
 			$(".dot-in").eq(index).addClass('current');
 		}
 	});
+
 	$(".cont-top").find('li:last a').on('click',function () {
 		$(".list-l").html(' 分集剧情');
 		$(".list-r").hide();
@@ -159,6 +165,7 @@ $(document).ready(function () {
 		$(".list-num").show();
 		$(".cont-num").hide();
 	});
+
 	$(".cont-top").find('li:first a').on('click',function () {
 		$(".list-l").html(' 剧集列表 ( 更新至<span>80</span>集/共80集 ) ');
 		$(".list-r").show();
@@ -187,37 +194,15 @@ $(document).ready(function () {
 			$(".synopsis").find('dl').hide().eq(numIndex).show();
 		});
 	});
+
 	$(".list-r").find('li:first a').on('click',function () {
 		$(".cont-bottom").hide();
 		$(".cont-num").show();
 		$(".cont-pic").show();
 		$(this).parent().addClass('selected').next().removeClass('selected');
-
-	//<数字选集空白部分的图片瀑布流实现 
-	
-		var c=$(".cont-pic").children();
-		var col=parseInt($('.cont-pic').width()/c.eq(0).outerWidth());
-		var heightArr=[],minH=0,minI=0;
-		setTimeout(function () {
-			c.each(function (i) {
-				if (i<col) {
-					heightArr.push(c.eq(i).innerHeight());
-				}else{
-					minH = _.min(heightArr);
-					minI = getIndex(heightArr,minH);
-					c.eq(i).css({
-						position:'absolute',
-						left:minI*c.eq(0).outerWidth(),
-						top:minH
-					});
-					heightArr[minI]+=c.eq(i).outerHeight();
-				}
-			});
-		},100);
-
-	//数字选集空白部分的图片瀑布流实现 >
-	
+		waterfall();
 	});
+
 	$(".list-r").find('li:last a').on('click',function () {
 		$(".cont-bottom").show();
 		$(".cont-num").hide();
@@ -266,7 +251,10 @@ $(document).ready(function () {
 	//<吸顶效果 
 	
 	var scrollH=$(".cont-top").offset().top;
+
 	$(document).scroll(function () {
+		lazyImg();
+		waterfall();
 		if ($(document).scrollTop()>scrollH) {
 			$(".cont-top").css({
 				position:'fixed',
@@ -309,7 +297,7 @@ $(document).ready(function () {
 			paddingLeft:0
 		},100)
 	}).on('click',function () {
-		$('html,body').animate({scrollTop:0},200);
+		$('html,body').animate({scrollTop:0},400);
 	});
 
 	//返回顶部按钮的动画效果>
@@ -343,6 +331,54 @@ $(document).ready(function () {
 	});
 	
 	//ajax调用信息>
+	
+	//<数字选集空白部分的图片瀑布流实现 
+	
+	function waterfall() {
+		var c=$(".cont-pic").children();
+		var col=parseInt($('.cont-pic').width()/c.eq(0).outerWidth());
+		var heightArr=[],minH=0,minI=0;
+		setTimeout(function () {
+			c.each(function (i) {
+				if (i<col) {
+					heightArr.push(c.eq(i).innerHeight());
+				}else{
+					minH = _.min(heightArr);
+					minI = getIndex(heightArr,minH);
+					c.eq(i).css({
+						position:'absolute',
+						left:minI*c.eq(0).outerWidth(),
+						top:minH
+					});
+					heightArr[minI]+=c.eq(i).outerHeight();
+				}
+			});
+		});
+	}
+
+	//数字选集空白部分的图片瀑布流实现 >
+
+
+	//图片懒加载
+
+    function lazyImg() {
+    	var lazyImgs=$('img[data-src]');
+    	var $document = $(document);
+    	var dtop = $document.scrollTop();
+    	if (lazyImgs.length > 0) {
+    		var dheight = $document.height();
+    		var loadedIndex = [];
+    		lazyImgs.each(function (i) {
+    			if (lazyImgs.eq(i).offset().top - dtop < dheight) {
+    				lazyImgs.eq(i).attr('src', lazyImgs.eq(i).attr('data-src'));
+    				loadedIndex.push(i);
+    			}
+    		});
+    		for (var i = 0; i < loadedIndex.length; i++) {
+    			lazyImgs.splice(0, 1);
+    		}
+    	}
+    }
 	
 	//获取输入的val值在arr数组中的index
 	
