@@ -160,6 +160,7 @@ $(document).ready(function () {
 		$(".list-l").html(' 分集剧情');
 		$(".list-r").hide();
 		$(".cont-bottom").hide();
+		$(".cont-pic").hide();
 		$(".cont-synopsis").show();
 		$(this).parent().addClass('selected').prev().removeClass('selected');
 		$(".list-num").show();
@@ -251,7 +252,7 @@ $(document).ready(function () {
 	//<吸顶效果 
 	
 	var scrollH=$(".cont-top").offset().top;
-
+	lazyImg();
 	$(document).scroll(function () {
 		lazyImg();
 		waterfall();
