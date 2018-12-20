@@ -11,29 +11,32 @@ html, body {
   width: 100%; }
 
 .box {
-  min-width: 1024px;
+  width: 100%;
+  min-width: 768px;
   background-color: #f8f8f8;
   margin: 0 auto; }
   .box header {
     width: 100%;
     height: 400px;
-    background: url(../img/logo2.jpg) no-repeat center 0; }
+    background: url(../img/logo2.jpg) no-repeat 39% 0;
+    background-size: cover; }
   .box .introduce {
     width: 100%;
-    margin-top: -100px;
+    margin-top: -160px;
     background-color: #f8f8f8; }
     .box .introduce .int-in {
-      width: 80%;
+      width: 95%;
       margin: 0 auto; }
       .box .introduce .int-in .img {
         border: 10px solid #fff;
         box-shadow: 0 1px 1px 1px rgba(98, 98, 98, 0.1);
         display: inline-block;
         margin: 5px 10px;
-        vertical-align: top; }
+        vertical-align: top;
+        display: none; }
       .box .introduce .int-in .info {
-        width: 550px;
-        margin: 5px 10px;
+        width: 100%;
+        margin: 5px auto;
         display: inline-block;
         vertical-align: top; }
         .box .introduce .int-in .info .area-lang {
@@ -66,8 +69,9 @@ html, body {
             color: #999;
             font-style: normal; }
   .box .carousel {
-    width: 96%;
+    width: 80%;
     margin: 0 auto;
+    height: 718px;
     position: relative; }
     .box .carousel .caro-in {
       width: 500px;
@@ -115,7 +119,7 @@ html, body {
     .box .carousel .caro-play {
       position: absolute;
       left: 0;
-      top: 100px; }
+      top: 450px; }
       .box .carousel .caro-play li {
         width: 200px;
         height: 20px;
@@ -146,8 +150,8 @@ html, body {
       height: 318px;
       border: 1px solid #000;
       position: absolute;
-      top: 44px;
-      right: -14px; }
+      top: 400px;
+      right: 0; }
       .box .carousel .caro-search .search-in h3 {
         text-align: center; }
       .box .carousel .caro-search .search-in .search-list {
@@ -184,8 +188,8 @@ html, body {
           .box .content .cont-top ul .selected a {
             color: #5aa700; }
     .box .content .content-in {
-      width: 80%;
-      margin: 10px auto;
+      width: 100%;
+      margin: 0 15px;
       overflow: hidden;
       position: relative; }
       .box .content .content-in .cont-l {
@@ -205,7 +209,7 @@ html, body {
           .box .content .content-in .cont-l .list .list-r {
             position: absolute;
             top: -10px;
-            right: 30px; }
+            right: 0; }
             .box .content .content-in .cont-l .list .list-r ul {
               border-radius: 3px;
               border: 1px solid #5aa700;
@@ -276,7 +280,7 @@ html, body {
                 .box .content .content-in .cont-l .list .list-part ul .selected a {
                   color: #5aa700; }
       .box .content .content-in .cont-r {
-        width: 29%;
+        width: 25%;
         float: right;
         margin-left: 10px; }
         .box .content .content-in .cont-r .list {
@@ -301,9 +305,9 @@ html, body {
               margin-left: 5px;
               margin-top: 10px; }
       .box .content .content-in .cont-bottom {
-        width: 70%;
+        width: 61%;
         position: absolute;
-        left: 0;
+        left: 9%;
         top: 103px; }
         .box .content .content-in .cont-bottom ul {
           overflow: hidden; }
@@ -326,7 +330,7 @@ html, body {
           font-size: 14px;
           line-height: 18px; }
       .box .content .content-in .cont-num {
-        width: 70%;
+        width: 73%;
         position: absolute;
         left: 0;
         top: 90px;
@@ -351,10 +355,10 @@ html, body {
                 background-color: #5aa700;
                 color: #fff; }
       .box .content .content-in .cont-pic {
-        width: 70%;
+        width: 73%;
         position: absolute;
         left: 0;
-        top: 480px;
+        top: 520px;
         display: none; }
         .box .content .content-in .cont-pic .pic {
           padding: 10px 0 0 10px;
@@ -363,7 +367,8 @@ html, body {
             padding: 10px 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            vertical-align: top; }
+            vertical-align: top;
+            width: 150px; }
       .box .content .content-in .cont-upto {
         width: 40px;
         height: 40px;
@@ -390,4 +395,4 @@ html, body {
           top: 9px;
           border-bottom-color: #fff; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=media1024.css.map */

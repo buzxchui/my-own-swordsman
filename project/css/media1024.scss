@@ -11,20 +11,22 @@ html,body{
 	width: 100%;
 }
 .box{
-	min-width: 1024px;
+	width: 100%;
+	min-width: 768px;
 	background-color: #f8f8f8;
 	margin: 0 auto;
 	header{
 		width: 100%;
 		height: 400px;
-		background: url(../img/logo2.jpg) no-repeat center 0;
+		background: url(../img/logo2.jpg) no-repeat 39% 0;
+		background-size: cover;
 	}
 	.introduce{
 		width: 100%;
-		margin-top: -100px;
+		margin-top: -160px;
 		background-color: #f8f8f8;
 		.int-in{
-			width: 80%;
+			width: 95%;
 			margin: 0 auto;
 			.img{
 				border: 10px solid #fff;
@@ -32,10 +34,11 @@ html,body{
 				display: inline-block;
 				margin: 5px 10px;
 				vertical-align: top;
+				display: none;
 			}
 			.info{
-				width: 550px;
-				margin: 5px 10px;
+				width: 100%;
+				margin: 5px auto;
 				display: inline-block;
 				vertical-align: top;
 				.area-lang{
@@ -83,8 +86,9 @@ html,body{
 		}
 	}
 	.carousel{
-		width: 96%;
+		width: 80%;
 		margin: 0 auto;
+		height: 718px;
 		position: relative;
 		.caro-in{
 			width: 500px;
@@ -140,7 +144,7 @@ html,body{
 		.caro-play{
 				position: absolute;
 				left: 0;
-				top: 100px;
+				top: 450px;
 				li{
 					width: 200px;
 					height: 20px;
@@ -178,8 +182,8 @@ html,body{
 			height: 318px;
 			border: 1px solid #000;
 			position: absolute;
-			top: 44px;
-			right: -14px;
+			top: 400px;
+			right: 0;
 			.search-in{
 				h3{
 					text-align: center;
@@ -231,8 +235,8 @@ html,body{
 				}
 			}
 		.content-in{
-			width: 80%;
-			margin: 10px auto;
+			width: 100%;
+			margin: 0 15px;
 			overflow: hidden;
 			position: relative;
 			
@@ -255,7 +259,7 @@ html,body{
 					.list-r{
 						position: absolute;
 						top: -10px;
-						right: 30px;
+						right: 0;
 						ul{
 							border-radius: 3px;
 							border: 1px solid #5aa700;
@@ -351,7 +355,7 @@ html,body{
 				}
 			}
 			.cont-r{
-				width: 29%;
+				width: 25%;
 				float: right;
 				margin-left: 10px;
 				.list{
@@ -385,9 +389,9 @@ html,body{
 				}
 			}
 			.cont-bottom{
-				width: 70%;
+				width: 61%;
 				position: absolute;
-				left: 0;
+				left: 9%;
 				top: 103px;
 				ul{
 					overflow: hidden;
@@ -419,7 +423,7 @@ html,body{
 				}
 			}
 			.cont-num{
-				width: 70%;
+				width: 73%;
 				position: absolute;
 				left: 0;
 				top: 90px;
@@ -450,10 +454,10 @@ html,body{
 				}
 			}
 			.cont-pic{
-				width: 70%;
+				width: 73%;
 				position: absolute;
 				left: 0;
-				top: 480px;
+				top: 520px;
 				display: none;
 				.pic{
 					padding: 10px 0 0 10px;
@@ -463,6 +467,7 @@ html,body{
 						border: 1px solid #ccc;
 						border-radius: 4px;
 						vertical-align: top;
+						width: 150px;
 					}
 				}
 			}

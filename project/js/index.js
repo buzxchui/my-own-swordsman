@@ -2,7 +2,7 @@ $(document).ready(function () {
 	
 	//<简介的展开与收起 
 	
-	var len=180;
+	var len=80;
 	var content=$('.brief-intro span').text();
 	var a=$('<a href="javascript:;"></a>');
 	var span=$('<span></span>');
@@ -62,16 +62,17 @@ $(document).ready(function () {
 	});
 
 	$(".dot-in:first").addClass('current');
+	var distance=$(".caro-img").width();
 	timer=setInterval(function () {
 		img.eq(index).animate({
-			'left':-500
+			'left':-distance
 		});
 		index++;
 		if (index>img.length-1) {
 			index=0;
 		};
 		img.eq(index).animate({
-			'left':500
+			'left':distance
 		},0).animate({
 			left:0
 		});
@@ -89,14 +90,14 @@ $(document).ready(function () {
 	}).mouseleave(function () {
 		timer=setInterval(function () {
 		img.eq(index).animate({
-			'left':-500
+			'left':-distance
 		});
 		index++;
 		if (index>img.length-1) {
 			index=0;
 		};
 		img.eq(index).animate({
-			'left':500
+			'left':distance
 		},0).animate({
 			left:0
 		});
@@ -112,7 +113,7 @@ $(document).ready(function () {
 
 	$(".caro-l").on('click',function () {
 		img.eq(index).animate({
-			'left':500
+			'left':distance
 		});
 		index--;
 		if (index<0) {
@@ -121,7 +122,7 @@ $(document).ready(function () {
 		img.eq(index).css({
 			zIndex:12
 		}).animate({
-			'left':-500
+			'left':-distance
 		},0).animate({
 			left:0
 		});
@@ -136,14 +137,14 @@ $(document).ready(function () {
 
 	$(".caro-r").on('click',function () {
 		img.eq(index).animate({
-			'left':-500
+			'left':-distance
 		});
 		index++;
 		if (index>img.length-1) {
 			index=0;
 		};
 		img.eq(index).animate({
-			'left':500
+			'left':distance
 		},0).animate({
 			left:0
 		});
@@ -157,23 +158,49 @@ $(document).ready(function () {
 	});
 
 	$(".cont-top").find('li:last a').on('click',function () {
+		$(".list-l").show();
 		$(".list-l").html(' 分集剧情');
 		$(".list-r").hide();
 		$(".cont-bottom").hide();
 		$(".cont-pic").hide();
 		$(".cont-synopsis").show();
-		$(this).parent().addClass('selected').prev().removeClass('selected');
+		$(this).parent().siblings('.selected').removeClass('selected');
+		$(this).parent().addClass('selected');
+		if ($(".cont-top").find('li').eq(1).hasClass('smallC')) {
+			$(".cont-r").hide();
+		};
 		$(".list-num").show();
+		$(".list-part").hide();
 		$(".cont-num").hide();
 	});
 
+	$(".cont-top").find('li').eq(1).find('a').on('click',function () {
+		$(".list-r").hide();
+		$(".cont-r").show();
+		$(".cont-bottom").hide();
+		$(".cont-pic").hide();
+		$(".cont-synopsis").hide();
+		$(this).parent().siblings('.selected').removeClass('selected');
+		$(this).parent().addClass('selected');
+		$(this).parent().addClass('smallC');
+		$(".list-num").hide();
+		$(".list-part").hide();
+		$(".cont-num").hide();
+		$(".list-l").hide();
+	});
+
 	$(".cont-top").find('li:first a').on('click',function () {
+		$(".list-l").show();
 		$(".list-l").html(' 剧集列表 ( 更新至<span>80</span>集/共80集 ) ');
 		$(".list-r").show();
-		
 		$(".cont-synopsis").hide();
-		$(this).parent().addClass('selected').next().removeClass('selected');
+		$(this).parent().siblings('.selected').removeClass('selected');
+		$(this).parent().addClass('selected');
+		if ($(".cont-top").find('li').eq(1).hasClass('smallC')) {
+			$(".cont-r").hide();
+		};
 		$(".list-num").hide();
+		$(".list-part").show();
 		if ($(".list-r").find('li:first').hasClass('selected')) {
 			$(".cont-num").show();
 			$(".cont-pic").show();
@@ -196,9 +223,19 @@ $(document).ready(function () {
 		});
 	});
 
+	$(".list-part").find('li').each(function () {
+		$(this).children('a').on('click',function () {
+			var numIndex=$(this).parent().index();
+			$(this).parent().siblings('.selected').removeClass('selected');
+			$(this).parent().addClass('selected');
+			$(".cont-bottom").find('ul').hide().eq(numIndex).show();
+		});
+	});
+
 	$(".list-r").find('li:first a').on('click',function () {
 		$(".cont-bottom").hide();
 		$(".cont-num").show();
+		$(".list-part").hide();
 		$(".cont-pic").show();
 		$(this).parent().addClass('selected').next().removeClass('selected');
 		waterfall();
@@ -207,6 +244,7 @@ $(document).ready(function () {
 	$(".list-r").find('li:last a').on('click',function () {
 		$(".cont-bottom").show();
 		$(".cont-num").hide();
+		$(".list-part").show();
 		$(".cont-pic").hide();
 		$(this).parent().addClass('selected').prev().removeClass('selected');
 	});
@@ -390,5 +428,6 @@ $(document).ready(function () {
 			}
 		}
 	};
+
 	
 })

@@ -11,20 +11,22 @@ html,body{
 	width: 100%;
 }
 .box{
-	min-width: 1024px;
+	width: 100%;
+	min-width: 480px;
 	background-color: #f8f8f8;
 	margin: 0 auto;
 	header{
 		width: 100%;
 		height: 400px;
-		background: url(../img/logo2.jpg) no-repeat center 0;
+		background: url(../img/logo2.jpg) no-repeat 41% 0;
+		background-size: cover;
 	}
 	.introduce{
 		width: 100%;
-		margin-top: -100px;
+		margin-top: -160px;
 		background-color: #f8f8f8;
 		.int-in{
-			width: 80%;
+			width: 95%;
 			margin: 0 auto;
 			.img{
 				border: 10px solid #fff;
@@ -32,10 +34,11 @@ html,body{
 				display: inline-block;
 				margin: 5px 10px;
 				vertical-align: top;
+				display: none;
 			}
 			.info{
-				width: 550px;
-				margin: 5px 10px;
+				width: 100%;
+				margin: 5px auto;
 				display: inline-block;
 				vertical-align: top;
 				.area-lang{
@@ -83,8 +86,9 @@ html,body{
 		}
 	}
 	.carousel{
-		width: 96%;
+		width: 100%;
 		margin: 0 auto;
+		height: 909px;
 		position: relative;
 		.caro-in{
 			width: 500px;
@@ -139,8 +143,10 @@ html,body{
 		}
 		.caro-play{
 				position: absolute;
-				left: 0;
-				top: 100px;
+				left: 50%;
+				top: 400px;
+				width: 280px;
+				margin-left: -140px;
 				li{
 					width: 200px;
 					height: 20px;
@@ -178,8 +184,9 @@ html,body{
 			height: 318px;
 			border: 1px solid #000;
 			position: absolute;
-			top: 44px;
-			right: -14px;
+			top: 606px;
+			right: 50%;
+			margin-right: -146px;
 			.search-in{
 				h3{
 					text-align: center;
@@ -203,7 +210,7 @@ html,body{
 				width: 100%;
 				height: 40px;
 				ul{
-					width: 80%;
+					width: 95%;
 					margin: 0 auto;
 					height: 40px;
 					border-bottom: 2px solid #ededed;
@@ -231,8 +238,8 @@ html,body{
 				}
 			}
 		.content-in{
-			width: 80%;
-			margin: 10px auto;
+			width: 100%;
+			margin: 0 15px;
 			overflow: hidden;
 			position: relative;
 			
@@ -255,7 +262,7 @@ html,body{
 					.list-r{
 						position: absolute;
 						top: -10px;
-						right: 30px;
+						right: -52px;
 						ul{
 							border-radius: 3px;
 							border: 1px solid #5aa700;
@@ -282,7 +289,7 @@ html,body{
 					.list-num{
 						position: absolute;
 						top: -10px;
-						right: 110px;
+						right: -90px;
 						display: none;
 						ul{
 							overflow: hidden;
@@ -351,9 +358,10 @@ html,body{
 				}
 			}
 			.cont-r{
-				width: 29%;
+				width: 33%;
 				float: right;
-				margin-left: 10px;
+				margin-right: 15px;
+				margin-left: 0;
 				.list{
 					width: 100%;
 					margin-top: 30px;
@@ -385,16 +393,16 @@ html,body{
 				}
 			}
 			.cont-bottom{
-				width: 70%;
+				width: 59%;
 				position: absolute;
-				left: 0;
+				left: 6%;
 				top: 103px;
 				ul{
 					overflow: hidden;
 					li{
 						width: 130px;
 						float: left;
-						margin-right: 20px;
+						margin-right: 10px;
 						margin-bottom: 22px;
 						p{
 							font-size: 12px;
@@ -403,7 +411,7 @@ html,body{
 				}
 			}
 			.cont-synopsis{
-				width: 70%;
+				width: 64%;
 				position: absolute;
 				left: 0;
 				top: 70px;
@@ -419,7 +427,7 @@ html,body{
 				}
 			}
 			.cont-num{
-				width: 70%;
+				width: 69%;
 				position: absolute;
 				left: 0;
 				top: 90px;
@@ -429,8 +437,9 @@ html,body{
 					margin-bottom: 10px;
 					li{
 						float: left;
-						margin-right: 10px;
+						margin-right: 6px;
 						border-radius: 3px;
+						margin-bottom: 3px;
 						a{
 							display: block;
 							text-align: center;
@@ -450,11 +459,11 @@ html,body{
 				}
 			}
 			.cont-pic{
-				width: 70%;
+				width: 73%;
 				position: absolute;
 				left: 0;
-				top: 480px;
-				display: none;
+				top: 520px;
+				display: none !important;
 				.pic{
 					padding: 10px 0 0 10px;
 					float: left;
@@ -463,6 +472,7 @@ html,body{
 						border: 1px solid #ccc;
 						border-radius: 4px;
 						vertical-align: top;
+						width: 150px;
 					}
 				}
 			}

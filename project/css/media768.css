@@ -11,29 +11,32 @@ html, body {
   width: 100%; }
 
 .box {
-  min-width: 1024px;
+  width: 100%;
+  min-width: 480px;
   background-color: #f8f8f8;
   margin: 0 auto; }
   .box header {
     width: 100%;
     height: 400px;
-    background: url(../img/logo2.jpg) no-repeat center 0; }
+    background: url(../img/logo2.jpg) no-repeat 41% 0;
+    background-size: cover; }
   .box .introduce {
     width: 100%;
-    margin-top: -100px;
+    margin-top: -160px;
     background-color: #f8f8f8; }
     .box .introduce .int-in {
-      width: 80%;
+      width: 95%;
       margin: 0 auto; }
       .box .introduce .int-in .img {
         border: 10px solid #fff;
         box-shadow: 0 1px 1px 1px rgba(98, 98, 98, 0.1);
         display: inline-block;
         margin: 5px 10px;
-        vertical-align: top; }
+        vertical-align: top;
+        display: none; }
       .box .introduce .int-in .info {
-        width: 550px;
-        margin: 5px 10px;
+        width: 100%;
+        margin: 5px auto;
         display: inline-block;
         vertical-align: top; }
         .box .introduce .int-in .info .area-lang {
@@ -66,8 +69,9 @@ html, body {
             color: #999;
             font-style: normal; }
   .box .carousel {
-    width: 96%;
+    width: 100%;
     margin: 0 auto;
+    height: 909px;
     position: relative; }
     .box .carousel .caro-in {
       width: 500px;
@@ -114,8 +118,10 @@ html, body {
           background: red; }
     .box .carousel .caro-play {
       position: absolute;
-      left: 0;
-      top: 100px; }
+      left: 50%;
+      top: 400px;
+      width: 280px;
+      margin-left: -140px; }
       .box .carousel .caro-play li {
         width: 200px;
         height: 20px;
@@ -146,8 +152,9 @@ html, body {
       height: 318px;
       border: 1px solid #000;
       position: absolute;
-      top: 44px;
-      right: -14px; }
+      top: 606px;
+      right: 50%;
+      margin-right: -146px; }
       .box .carousel .caro-search .search-in h3 {
         text-align: center; }
       .box .carousel .caro-search .search-in .search-list {
@@ -163,7 +170,7 @@ html, body {
       width: 100%;
       height: 40px; }
       .box .content .cont-top ul {
-        width: 80%;
+        width: 95%;
         margin: 0 auto;
         height: 40px;
         border-bottom: 2px solid #ededed; }
@@ -184,8 +191,8 @@ html, body {
           .box .content .cont-top ul .selected a {
             color: #5aa700; }
     .box .content .content-in {
-      width: 80%;
-      margin: 10px auto;
+      width: 100%;
+      margin: 0 15px;
       overflow: hidden;
       position: relative; }
       .box .content .content-in .cont-l {
@@ -205,7 +212,7 @@ html, body {
           .box .content .content-in .cont-l .list .list-r {
             position: absolute;
             top: -10px;
-            right: 30px; }
+            right: -52px; }
             .box .content .content-in .cont-l .list .list-r ul {
               border-radius: 3px;
               border: 1px solid #5aa700;
@@ -226,7 +233,7 @@ html, body {
           .box .content .content-in .cont-l .list .list-num {
             position: absolute;
             top: -10px;
-            right: 110px;
+            right: -90px;
             display: none; }
             .box .content .content-in .cont-l .list .list-num ul {
               overflow: hidden;
@@ -276,9 +283,10 @@ html, body {
                 .box .content .content-in .cont-l .list .list-part ul .selected a {
                   color: #5aa700; }
       .box .content .content-in .cont-r {
-        width: 29%;
+        width: 33%;
         float: right;
-        margin-left: 10px; }
+        margin-right: 15px;
+        margin-left: 0; }
         .box .content .content-in .cont-r .list {
           width: 100%;
           margin-top: 30px;
@@ -301,21 +309,21 @@ html, body {
               margin-left: 5px;
               margin-top: 10px; }
       .box .content .content-in .cont-bottom {
-        width: 70%;
+        width: 59%;
         position: absolute;
-        left: 0;
+        left: 6%;
         top: 103px; }
         .box .content .content-in .cont-bottom ul {
           overflow: hidden; }
           .box .content .content-in .cont-bottom ul li {
             width: 130px;
             float: left;
-            margin-right: 20px;
+            margin-right: 10px;
             margin-bottom: 22px; }
             .box .content .content-in .cont-bottom ul li p {
               font-size: 12px; }
       .box .content .content-in .cont-synopsis {
-        width: 70%;
+        width: 64%;
         position: absolute;
         left: 0;
         top: 70px;
@@ -326,7 +334,7 @@ html, body {
           font-size: 14px;
           line-height: 18px; }
       .box .content .content-in .cont-num {
-        width: 70%;
+        width: 69%;
         position: absolute;
         left: 0;
         top: 90px;
@@ -336,8 +344,9 @@ html, body {
           margin-bottom: 10px; }
           .box .content .content-in .cont-num ul li {
             float: left;
-            margin-right: 10px;
-            border-radius: 3px; }
+            margin-right: 6px;
+            border-radius: 3px;
+            margin-bottom: 3px; }
             .box .content .content-in .cont-num ul li a {
               display: block;
               text-align: center;
@@ -351,11 +360,11 @@ html, body {
                 background-color: #5aa700;
                 color: #fff; }
       .box .content .content-in .cont-pic {
-        width: 70%;
+        width: 73%;
         position: absolute;
         left: 0;
-        top: 480px;
-        display: none; }
+        top: 520px;
+        display: none !important; }
         .box .content .content-in .cont-pic .pic {
           padding: 10px 0 0 10px;
           float: left; }
@@ -363,7 +372,8 @@ html, body {
             padding: 10px 10px;
             border: 1px solid #ccc;
             border-radius: 4px;
-            vertical-align: top; }
+            vertical-align: top;
+            width: 150px; }
       .box .content .content-in .cont-upto {
         width: 40px;
         height: 40px;
@@ -390,4 +400,4 @@ html, body {
           top: 9px;
           border-bottom-color: #fff; }
 
-/*# sourceMappingURL=index.css.map */
+/*# sourceMappingURL=media768.css.map */
